@@ -1,0 +1,8 @@
+accessWidener v1 named
+
+accessible field net/minecraft/EntityLiving tasks Lnet/minecraft/EntityAITasks;
+
+accessible field net/minecraft/WeightedRandomItem itemWeight I
+accessible field net/minecraft/WeightedRandomChestContent theItemId Lnet/minecraft/ItemStack;
+accessible field net/minecraft/WeightedRandomChestContent min_quantity I
+accessible field net/minecraft/WeightedRandomChestContent max_quantity I

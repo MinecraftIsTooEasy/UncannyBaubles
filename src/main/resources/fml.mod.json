@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "uncannycaubles",
+  "version": "1.0.0",
+  "depends": {
+    "fishmodloader": ">=3.4.2",
+    "rusted_iron_core": ">=1.5.0",
+    "baubles": ">=1.1.0"
+  },
+  "environment": "*",
+  "name": "Uncanny Baubles",
+  "description": "",
+  "authors": [
+    "Inf1nlty"
+  ],
+  "entrypoints": {
+    "main": [
+      "com.inf1nlty.uncannybaubles.UncannyBaublesMod"
+    ],
+    "emi": [
+      "com.inf1nlty.uncannybaubles.emi.UBEmiPlugin"
+    ]
+  },
+  "mixins": [
+    "uncannybaubles.mixins.json"
+  ],
+  "accessWidener": "uncannybaubles.accessWidener"
+}

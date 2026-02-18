@@ -1,0 +1,83 @@
+item.magnet.name=Magnet
+item.uncannybaubles:magnet.info=Attract nearby items
+
+item.lucky_clover.name=Lucky Clover
+item.uncannybaubles:lucky_clover.info=Adds 1 level to Fortune/Looting/Butchering enchantment effects.
+
+item.bottled_cloud.name=Bottled Cloud
+item.uncannybaubles:bottled_cloud.info=Allow Double jump
+
+item.pocket_piston.name=Pocket Piston
+item.uncannybaubles:pocket_piston.info=Touch distance +1
+
+item.bezoar.name=Bezoar
+item.uncannybaubles:bezoar.info=Immune poisoning
+
+item.regen_bracelet.name=Regeneration Bracelet
+item.uncannybaubles:regen_bracelet.info=Increases natural health regeneration rate by 25% (multiplicative).
+
+item.water_walking_boots.name=Water Walker Boots
+item.uncannybaubles:water_walking_boots.info=Allows the wearer to walk on water surfaces while worn.
+
+item.lava_walking_boots.name=Lava Walker Boots
+item.uncannybaubles:lava_walking_boots.info=Allows the wearer to walk on water and lava surfaces. Grants 7 seconds of fire immunity that depletes when touching lava.
+
+item.lava_charm.name=Lava Charm
+item.uncannybaubles:lava_charm.info=Grants 7 seconds of fire and lava immunity. Timer depletes when touching lava and recharges when safe.
+
+item.eternal_steak.name=Eternal Steak
+item.eternal_cooked_steak.name=Eternal Cooked Steak
+item.uncannybaubles:eternal_steak.info=Infinitely edible, has cooldown.
+item.uncannybaubles:eternal_steak.cooldown=§bCooldown: %d seconds
+
+item.kitty_slippers.name=Kitty Slippers
+item.uncannybaubles:kitty_slippers.info=Creepers flee from you and won't explode. Meow when hurt.
+
+item.fierce_kitty_slippers.name=Fierce Kitty Slippers
+item.uncannybaubles:fierce_kitty_slippers.info=Creepers flee from you. 10% chance to take 1 damage and disable for 5 minutes.
+
+item.lucky_horseshoe.name=Lucky Horseshoe
+item.uncannybaubles:lucky_horseshoe.info=Complete immunity to fall damage
+
+uncannybaubles.fierce_kitty_slippers.cooldown=§cFierce Kitty Slippers Cooldown: %d:%02d
+
+uncannybaubles.lava_immunity=Lava Immunity
+
+emi.lucky_clover.desc=When worn, grants Fortune/Looting/Butchering +1
+emi.lucky_clover.obtain=Source: 0.1% drop chance from all creatures
+
+emi.bezoar.desc=Grants immunity to poison effects when worn.
+emi.bezoar.obtain=Source: 1% drop chance from spiders
+
+emi.regen_bracelet.desc=Increases natural health regeneration\nrate by 25% (multiplicative) when worn
+emi.regen_bracelet.obtain=Source: Swamp hut chests\n/ 10% drop from witches
+
+emi.magnet.desc=Attracts nearby items
+emi.magnet.obtain=Source: Can be crafted
+
+emi.water_walking_boots.desc=Allows walking on water surface
+emi.water_walking_boots.obtain=Source: Fishing
+
+emi.lava_walking_boots.desc=Allows walking on lava and water.\nProvides 7 seconds of lava immunity.
+emi.lava_walking_boots.obtain=Crafted from Water Walking Boots\nand Lava Charm
+
+emi.lava_charm.desc=Provides 7 seconds of lava immunity.\nRecharges when safe.
+emi.lava_charm.obtain=Source: 1% drop from Fire Elementals\n/ Nether Fortress chests
+
+emi.bottled_cloud.desc=Grants double jump ability
+emi.bottled_cloud.obtain=Source: Dungeons, Mineshafts,\nDesert Temples
+
+emi.pocket_piston.desc=Increases reach distance by 1
+emi.pocket_piston.obtain=Source: Village blacksmith chests
+
+emi.kitty_slippers.desc=Creepers flee from you and won't explode\neven when attacked.\nPlayer meows when hurt~
+emi.kitty_slippers.obtain=Source: Desert & Jungle Temples
+
+emi.fierce_kitty_slippers.desc=Like Kitty Slippers, but 10% chance\nto take damage and disable for 5 minutes.
+emi.fierce_kitty_slippers.obtain=Source: Overworld dungeons
+
+emi.eternal_steak.desc=Infinitely edible with 15 second cooldown
+emi.eternal_steak.obtain=Source: 0.2% drop chance from cows
+
+emi.lucky_horseshoe.desc=Complete immunity to fall damage
+emi.lucky_horseshoe.obtain=Source: 25% drop from mules\n(horse + donkey hybrid)

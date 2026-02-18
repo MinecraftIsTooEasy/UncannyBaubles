@@ -1,0 +1,83 @@
+item.magnet.name=物品磁铁
+item.uncannybaubles:magnet.info=吸附附近的物品
+
+item.lucky_clover.name=幸运四叶草
+item.uncannybaubles:lucky_clover.info=增加1级时运/抢夺/屠宰附魔效果
+
+item.bottled_cloud.name=云朵瓶
+item.uncannybaubles:bottled_cloud.info=允许二段跳
+
+item.pocket_piston.name=袖珍活塞
+item.uncannybaubles:pocket_piston.info=触及距离+1
+
+item.bezoar.name=牛黄
+item.uncannybaubles:bezoar.info=免疫中毒
+
+item.regen_bracelet.name=再生手环
+item.uncannybaubles:regen_bracelet.info=自然回血速度乘算提升25%
+
+item.water_walking_boots.name=水上漂靴
+item.uncannybaubles:water_walking_boots.info=佩戴者可以在水面上行走
+
+item.lava_walking_boots.name=熔岩靴
+item.uncannybaubles:lava_walking_boots.info=可在水面和熔岩表面行走，提供7秒火焰和岩浆免疫
+
+item.lava_charm.name=熔岩护身符
+item.uncannybaubles:lava_charm.info=提供7秒火焰和岩浆免疫
+
+item.eternal_steak.name=永恒牛排
+item.eternal_cooked_steak.name=熟永恒牛排
+item.uncannybaubles:eternal_steak.info=可无限食用，有一定冷却时间
+item.uncannybaubles:eternal_steak.cooldown=§b冷却时间： %d 秒
+
+item.kitty_slippers.name=猫咪拖鞋
+item.uncannybaubles:kitty_slippers.info=苦力怕会远离你，攻击时不会爆炸。受伤时发出喵喵声。
+
+item.fierce_kitty_slippers.name=耄耋拖鞋
+item.uncannybaubles:fierce_kitty_slippers.info=苦力怕会远离你。10%概率受到1点伤害并使功能失效5分钟。
+
+item.lucky_horseshoe.name=幸运马掌
+item.uncannybaubles:lucky_horseshoe.info=完全免疫摔落伤害
+
+uncannybaubles.fierce_kitty_slippers.cooldown=§c耄耋拖鞋冷却: %d:%02d
+
+uncannybaubles.lava_immunity=熔岩免疫
+
+emi.lucky_clover.desc=佩戴时，玩家获得1级时运/抢夺/屠宰附魔效果、
+emi.lucky_clover.obtain=获取来源: 所有生物死亡时都有 0.1% 概率掉落
+
+emi.bezoar.desc=佩戴时，免疫中毒效果。
+emi.bezoar.obtain=获取来源: 所有蜘蛛默认1%概率掉落
+
+emi.regen_bracelet.desc=佩戴时自然恢复速度乘算加快25%
+emi.regen_bracelet.obtain=获取来源: 女巫小屋箱子/女巫默认10%概率掉落
+
+emi.magnet.desc=可以吸附附近的物品
+emi.magnet.obtain=获取来源: 可以直接合成
+
+emi.water_walking_boots.desc=可以在水面上行走
+emi.water_walking_boots.obtain=获取来源: 钓鱼获得
+
+emi.lava_walking_boots.desc=可以在熔岩和水面上行走，\n提供7秒熔岩免疫。
+emi.lava_walking_boots.obtain=由水上漂靴和熔岩护身符合成
+
+emi.lava_charm.desc=提供7秒的熔岩免疫，安全时恢复。
+emi.lava_charm.obtain=获取来源:火元素默认1%概率掉落，\n地狱要塞
+
+emi.bottled_cloud.desc=提供二段跳能力
+emi.bottled_cloud.obtain=获取来源: 地牢、废弃矿井、沙漠神殿
+
+emi.pocket_piston.desc=增加1点触及距离
+emi.pocket_piston.obtain=获取来源: 村庄铁匠铺
+
+emi.kitty_slippers.desc=苦力怕会主动远离你，\n即使被攻击也不会爆炸。\n玩家受伤时发出喵喵声~
+emi.kitty_slippers.obtain=获取来源: 沙漠、丛林神庙
+
+emi.fierce_kitty_slippers.desc=类似猫咪拖鞋，但有10%概率\n扣血并失效5分钟。
+emi.fierce_kitty_slippers.obtain=获取来源: 主世界地牢
+
+emi.eternal_steak.desc=可以无限食用，有默认15秒的冷却
+emi.eternal_steak.obtain=获取来源: 牛默认0.2%的几率掉落
+
+emi.lucky_horseshoe.desc=完全免疫摔落伤害
+emi.lucky_horseshoe.obtain=获取来源: 骡子默认25%概率掉落\n(马和驴杂交)

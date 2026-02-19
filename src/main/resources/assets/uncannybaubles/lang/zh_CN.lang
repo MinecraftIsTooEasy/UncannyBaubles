@@ -41,8 +41,6 @@ item.uncannybaubles:lucky_horseshoe.info=完全免疫摔落伤害
 
 uncannybaubles.fierce_kitty_slippers.cooldown=§c耄耋拖鞋冷却: %d:%02d
 
-uncannybaubles.lava_immunity=熔岩免疫
-
 emi.lucky_clover.desc=佩戴时，玩家获得1级时运/抢夺/屠宰附魔效果、
 emi.lucky_clover.obtain=获取来源: 所有生物死亡时都有 0.1% 概率掉落
 
@@ -81,3 +79,49 @@ emi.eternal_steak.obtain=获取来源: 牛默认0.2%的几率掉落
 
 emi.lucky_horseshoe.desc=完全免疫摔落伤害
 emi.lucky_horseshoe.obtain=获取来源: 骡子默认25%概率掉落\n(马和驴杂交)
+
+config.tab.drops=生物掉落概率
+config.tab.chests=箱子战利品概率
+config.tab.other=其他设置
+
+config.name.uncannybaubles.luckyCloverDropProbability=四叶草
+config.comment.uncannybaubles.luckyCloverDropProbability=普通生物死亡掉落幸运四叶草概率
+
+config.name.uncannybaubles.spiderBezoarDropProbability=牛黄
+config.comment.uncannybaubles.spiderBezoarDropProbability=蜘蛛死亡掉落牛黄概率
+
+config.name.uncannybaubles.fireElementalLavaCharmDropProbability=熔岩护身符
+config.comment.uncannybaubles.fireElementalLavaCharmDropProbability=火元素死亡掉落熔岩护身符概率
+
+config.name.uncannybaubles.witchRegenRingDropProbability=再生手环
+config.comment.uncannybaubles.witchRegenRingDropProbability=女巫死亡掉落再生手环概率
+
+config.name.uncannybaubles.cowEternalSteakDropProbability=永恒牛排
+config.comment.uncannybaubles.cowEternalSteakDropProbability=牛死亡掉落永恒牛排概率
+
+config.name.uncannybaubles.muleLuckyHorseshoeDropProbability=幸运马掌
+config.comment.uncannybaubles.muleLuckyHorseshoeDropProbability=骡子死亡掉落幸运马掌概率
+
+config.name.uncannybaubles.kittySlippersTempleChestProbability=猫咪拖鞋
+config.comment.uncannybaubles.kittySlippersTempleChestProbability=沙漠/丛林神庙箱子中找到猫咪拖鞋的概率
+
+config.name.uncannybaubles.fierceKittySlippersDungeonChestProbability=耄耋拖鞋
+config.comment.uncannybaubles.fierceKittySlippersDungeonChestProbability=地牢箱子中找到耄耋拖鞋的概率
+
+config.name.uncannybaubles.pocketPistonBlacksmithChestProbability=袖珍活塞
+config.comment.uncannybaubles.pocketPistonBlacksmithChestProbability=村庄铁匠铺箱子中找到袖珍活塞的概率
+
+config.name.uncannybaubles.lavaCharmFortressChestProbability=熔岩护身符
+config.comment.uncannybaubles.lavaCharmFortressChestProbability=地狱要塞箱子中找到熔岩护身符的概率
+
+config.name.uncannybaubles.bottledCloudDungeonChestProbability=云朵瓶
+config.comment.uncannybaubles.bottledCloudDungeonChestProbability=地牢箱子中找到云朵瓶的概率
+
+config.name.uncannybaubles.regenRingSwampHutChestProbability=再生手环
+config.comment.uncannybaubles.regenRingSwampHutChestProbability=女巫小屋箱子中找到再生手环的概率
+
+config.name.uncannybaubles.waterWalkerFishingProbability=水上漂靴
+config.comment.uncannybaubles.waterWalkerFishingProbability=钓鱼获得水上漂靴的概率
+
+config.name.uncannybaubles.eternalSteakCooldownTicks=永恒牛排
+config.comment.uncannybaubles.eternalSteakCooldownTicks=永恒牛排冷却时间(tick, 20tick=1秒)

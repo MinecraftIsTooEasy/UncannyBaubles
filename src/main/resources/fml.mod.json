@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "uncannycaubles",
+  "id": "uncannybaubles",
   "version": "1.0.0",
   "depends": {
     "fishmodloader": ">=3.4.2",
@@ -9,16 +9,25 @@
   },
   "environment": "*",
   "name": "Uncanny Baubles",
-  "description": "",
+  "description": "Add a series of uncanny baubles to MITE",
+  "icon": "assets/uncannybaubles/icon.png",
+  "license": "MIT",
   "authors": [
     "Inf1nlty"
   ],
+  "contact": {
+    "homepage": "https://github.com/MinecraftIsTooEasy/UncannyBaubles",
+    "issues": "https://github.com/MinecraftIsTooEasy/UncannyBaubles/issues"
+  },
   "entrypoints": {
     "main": [
       "com.inf1nlty.uncannybaubles.UncannyBaublesMod"
     ],
     "emi": [
       "com.inf1nlty.uncannybaubles.emi.UBEmiPlugin"
+    ],
+    "modmenu": [
+      "com.inf1nlty.uncannybaubles.compat.ModMenuImpl"
     ]
   },
   "mixins": [

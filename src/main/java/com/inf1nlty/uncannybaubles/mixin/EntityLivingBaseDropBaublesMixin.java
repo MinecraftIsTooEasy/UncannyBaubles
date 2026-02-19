@@ -1,6 +1,6 @@
 package com.inf1nlty.uncannybaubles.mixin;
 
-import com.inf1nlty.uncannybaubles.UBConfig;
+import com.inf1nlty.uncannybaubles.UBConfigs;
 import com.inf1nlty.uncannybaubles.item.UBItems;
 import com.inf1nlty.uncannybaubles.util.BaublesUtil;
 
@@ -25,7 +25,7 @@ public abstract class EntityLivingBaseDropBaublesMixin {
 
         if (self instanceof EntityArachnid) {
             if (UBItems.bezoar != null) {
-                double spiderProb = UBConfig.getSpiderBezoarDropProbability();
+                double spiderProb = UBConfigs.spiderBezoarDropProbability.getDoubleValue();
                 if (BaublesUtil.rollChance(self.worldObj.rand, spiderProb)) {
                     self.dropItem(UBItems.bezoar);
                 }
@@ -34,7 +34,7 @@ public abstract class EntityLivingBaseDropBaublesMixin {
 
         if (self instanceof EntityFireElemental) {
             if (UBItems.lava_charm != null) {
-                double fireElementalProb = UBConfig.getFireElementalLavaCharmDropProbability();
+                double fireElementalProb = UBConfigs.fireElementalLavaCharmDropProbability.getDoubleValue();
                 if (BaublesUtil.rollChance(self.worldObj.rand, fireElementalProb)) {
                     self.dropItem(UBItems.lava_charm);
                 }
@@ -43,7 +43,7 @@ public abstract class EntityLivingBaseDropBaublesMixin {
 
         if (self instanceof EntityCow) {
             if (UBItems.eternal_steak != null) {
-                double cowProb = UBConfig.getCowEternalSteakDropProbability();
+                double cowProb = UBConfigs.cowEternalSteakDropProbability.getDoubleValue();
                 if (BaublesUtil.rollChance(self.worldObj.rand, cowProb)) {
                     self.dropItem(UBItems.eternal_steak);
                 }
@@ -52,7 +52,7 @@ public abstract class EntityLivingBaseDropBaublesMixin {
 
         if (self instanceof EntityWitch) {
             if (UBItems.regen_bracelet != null) {
-                double witchProb = UBConfig.getWitchRegenRingDropProbability();
+                double witchProb = UBConfigs.witchRegenRingDropProbability.getDoubleValue();
                 if (BaublesUtil.rollChance(self.worldObj.rand, witchProb)) {
                     self.dropItem(UBItems.regen_bracelet);
                 }
@@ -62,7 +62,7 @@ public abstract class EntityLivingBaseDropBaublesMixin {
         if (self instanceof EntityHorse horse) {
             if (horse.getHorseType() == 2) {
                 if (UBItems.lucky_horseshoe != null) {
-                    double muleProb = UBConfig.getMuleLuckyHorseshoeDropProbability();
+                    double muleProb = UBConfigs.muleLuckyHorseshoeDropProbability.getDoubleValue();
                     if (BaublesUtil.rollChance(self.worldObj.rand, muleProb)) {
                         self.dropItem(UBItems.lucky_horseshoe);
                     }
@@ -72,7 +72,7 @@ public abstract class EntityLivingBaseDropBaublesMixin {
 
         if (UBItems.lucky_clover == null) return;
 
-        double probability = UBConfig.getLuckyCloverDropProbability();
+        double probability = UBConfigs.luckyCloverDropProbability.getDoubleValue();
         if (BaublesUtil.rollChance(self.worldObj.rand, probability)) {
             self.dropItem(UBItems.lucky_clover);
         }

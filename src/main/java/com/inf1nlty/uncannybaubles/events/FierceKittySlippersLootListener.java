@@ -1,6 +1,6 @@
 package com.inf1nlty.uncannybaubles.events;
 
-import com.inf1nlty.uncannybaubles.UBConfig;
+import com.inf1nlty.uncannybaubles.UBConfigs;
 import com.inf1nlty.uncannybaubles.item.UBItems;
 import moddedmite.rustedironcore.api.event.listener.ILootTableRegisterListener;
 import net.minecraft.ItemStack;
@@ -12,7 +12,7 @@ public class FierceKittySlippersLootListener implements ILootTableRegisterListen
 
     @Override
     public void onDungeonOverworldRegister(List<WeightedRandomChestContent> original) {
-        double probability = UBConfig.getFierceKittySlippersDungeonChestProbability();
+        double probability = UBConfigs.fierceKittySlippersDungeonChestProbability.getDoubleValue();
 
         if (probability > 0) {
             original.add(new WeightedRandomChestContent(

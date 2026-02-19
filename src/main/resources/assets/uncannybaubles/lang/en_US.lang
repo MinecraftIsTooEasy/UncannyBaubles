@@ -41,8 +41,6 @@ item.uncannybaubles:lucky_horseshoe.info=Complete immunity to fall damage
 
 uncannybaubles.fierce_kitty_slippers.cooldown=§cFierce Kitty Slippers Cooldown: %d:%02d
 
-uncannybaubles.lava_immunity=Lava Immunity
-
 emi.lucky_clover.desc=When worn, grants Fortune/Looting/Butchering +1
 emi.lucky_clover.obtain=Source: 0.1% drop chance from all creatures
 
@@ -81,3 +79,49 @@ emi.eternal_steak.obtain=Source: 0.2% drop chance from cows
 
 emi.lucky_horseshoe.desc=Complete immunity to fall damage
 emi.lucky_horseshoe.obtain=Source: 25% drop from mules\n(horse + donkey hybrid)
+
+config.tab.drops=Drop Probabilities
+config.tab.chests=Chest Loot Probabilities
+config.tab.other=Other Settings
+
+config.name.uncannybaubles.luckyCloverDropProbability=Lucky Clover
+config.comment.uncannybaubles.luckyCloverDropProbability=Drop chance of Lucky Clover from creatures
+
+config.name.uncannybaubles.spiderBezoarDropProbability=Bezoar
+config.comment.uncannybaubles.spiderBezoarDropProbability=Drop chance of Bezoar from spiders
+
+config.name.uncannybaubles.fireElementalLavaCharmDropProbability=Lava Charm
+config.comment.uncannybaubles.fireElementalLavaCharmDropProbability=Drop chance of Lava Charm from Fire Elementals
+
+config.name.uncannybaubles.witchRegenRingDropProbability=Regen Bracelet
+config.comment.uncannybaubles.witchRegenRingDropProbability=Drop chance of Regeneration Bracelet from witches
+
+config.name.uncannybaubles.cowEternalSteakDropProbability=Eternal Steak
+config.comment.uncannybaubles.cowEternalSteakDropProbability=Drop chance of Eternal Steak from cows
+
+config.name.uncannybaubles.muleLuckyHorseshoeDropProbability=Lucky Horseshoe
+config.comment.uncannybaubles.muleLuckyHorseshoeDropProbability=Drop chance of Lucky Horseshoe from mules
+
+config.name.uncannybaubles.kittySlippersTempleChestProbability=Kitty Slippers
+config.comment.uncannybaubles.kittySlippersTempleChestProbability=Chance to find in desert/jungle temple chests
+
+config.name.uncannybaubles.fierceKittySlippersDungeonChestProbability=Fierce Kitty Slippers
+config.comment.uncannybaubles.fierceKittySlippersDungeonChestProbability=Chance to find in dungeon chests
+
+config.name.uncannybaubles.pocketPistonBlacksmithChestProbability=Pocket Piston
+config.comment.uncannybaubles.pocketPistonBlacksmithChestProbability=Chance to find in village blacksmith chests
+
+config.name.uncannybaubles.lavaCharmFortressChestProbability=Lava Charm
+config.comment.uncannybaubles.lavaCharmFortressChestProbability=Chance to find in nether fortress chests
+
+config.name.uncannybaubles.bottledCloudDungeonChestProbability=Bottled Cloud
+config.comment.uncannybaubles.bottledCloudDungeonChestProbability=Chance to find in dungeon chests
+
+config.name.uncannybaubles.regenRingSwampHutChestProbability=Regen Bracelet
+config.comment.uncannybaubles.regenRingSwampHutChestProbability=Chance to find in swamp hut chests
+
+config.name.uncannybaubles.waterWalkerFishingProbability=Water Walking Boots
+config.comment.uncannybaubles.waterWalkerFishingProbability=Chance to catch while fishing
+
+config.name.uncannybaubles.eternalSteakCooldownTicks=Eternal Steak
+config.comment.uncannybaubles.eternalSteakCooldownTicks=Cooldown in ticks (20 ticks = 1 second)

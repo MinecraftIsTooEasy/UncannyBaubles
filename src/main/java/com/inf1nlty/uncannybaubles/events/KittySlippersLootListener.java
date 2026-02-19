@@ -1,6 +1,6 @@
 package com.inf1nlty.uncannybaubles.events;
 
-import com.inf1nlty.uncannybaubles.UBConfig;
+import com.inf1nlty.uncannybaubles.UBConfigs;
 import com.inf1nlty.uncannybaubles.item.UBItems;
 import moddedmite.rustedironcore.api.event.listener.ILootTableRegisterListener;
 import net.minecraft.ItemStack;
@@ -12,7 +12,7 @@ public class KittySlippersLootListener implements ILootTableRegisterListener {
 
     @Override
     public void onDesertPyramidRegister(List<WeightedRandomChestContent> original) {
-        double probability = UBConfig.getKittySlippersTempleChestProbability();
+        double probability = UBConfigs.kittySlippersTempleChestProbability.getDoubleValue();
 
         if (probability > 0) {
             original.add(new WeightedRandomChestContent(
@@ -26,7 +26,7 @@ public class KittySlippersLootListener implements ILootTableRegisterListener {
 
     @Override
     public void onJunglePyramidRegister(List<WeightedRandomChestContent> original) {
-        double probability = UBConfig.getKittySlippersTempleChestProbability();
+        double probability = UBConfigs.kittySlippersTempleChestProbability.getDoubleValue();
 
         if (probability > 0) {
             original.add(new WeightedRandomChestContent(

@@ -1,10 +1,9 @@
 package com.inf1nlty.uncannybaubles;
 
+import fi.dy.masa.malilib.config.ConfigManager;
 import net.fabricmc.api.ModInitializer;
 import net.xiaoyu233.fml.ModResourceManager;
 import net.xiaoyu233.fml.reload.event.MITEEvents;
-
-import java.io.File;
 
 public class UncannyBaublesMod implements ModInitializer {
 
@@ -14,9 +13,10 @@ public class UncannyBaublesMod implements ModInitializer {
 
         ModResourceManager.addResourcePackDomain(NAMESPACE);
 
-        UBConfig.load(new File("config/uncannybaubles.cfg"));
+        UBConfigs.getInstance().load();
+        ConfigManager.getInstance().registerConfig(UBConfigs.getInstance());
 
-        UBRICEvents.register();
         MITEEvents.MITE_EVENT_BUS.register(new UBFMLEvents());
+        UBRICEvents.register();
     }
 }

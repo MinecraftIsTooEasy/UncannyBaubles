@@ -1,7 +1,7 @@
 package com.inf1nlty.uncannybaubles.item;
 
 import baubles.creativetab.BaublesCreativeTab;
-import com.inf1nlty.uncannybaubles.UBConfig;
+import com.inf1nlty.uncannybaubles.UBConfigs;
 import com.inf1nlty.uncannybaubles.api.ICooldown;
 import net.minecraft.*;
 import org.lwjgl.input.Keyboard;
@@ -26,7 +26,7 @@ public class ItemEternalCookedSteak extends ItemMeat {
     public void onEaten(ItemStack item_stack, World world, EntityPlayer player) {
         super.onEaten(item_stack, world, player);
         if (player instanceof ICooldown) {
-            int cooldownTicks = UBConfig.getEternalSteakCooldownTicks();
+            int cooldownTicks = UBConfigs.eternalSteakCooldownTicks.getIntegerValue();
             ((ICooldown) player).ub$setEternalBeefCooldown(cooldownTicks);
         }
     }

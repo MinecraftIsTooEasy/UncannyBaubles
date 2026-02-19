@@ -1,6 +1,6 @@
 package com.inf1nlty.uncannybaubles.events;
 
-import com.inf1nlty.uncannybaubles.UBConfig;
+import com.inf1nlty.uncannybaubles.UBConfigs;
 import com.inf1nlty.uncannybaubles.item.UBItems;
 import moddedmite.rustedironcore.api.event.listener.ILootTableRegisterListener;
 import net.minecraft.ItemStack;
@@ -12,7 +12,7 @@ public class BottledCloudLootListener implements ILootTableRegisterListener {
 
     @Override
     public void onMineshaftRegister(List<WeightedRandomChestContent> original) {
-        double probability = UBConfig.getBottledCloudDungeonChestProbability();
+        double probability = UBConfigs.bottledCloudDungeonChestProbability.getDoubleValue();
 
         if (probability > 0) {
             original.add(new WeightedRandomChestContent(
@@ -26,7 +26,7 @@ public class BottledCloudLootListener implements ILootTableRegisterListener {
 
     @Override
     public void onDungeonOverworldRegister(List<WeightedRandomChestContent> original) {
-        double probability = UBConfig.getBottledCloudDungeonChestProbability();
+        double probability = UBConfigs.bottledCloudDungeonChestProbability.getDoubleValue();
 
         if (probability > 0) {
             original.add(new WeightedRandomChestContent(
@@ -40,7 +40,7 @@ public class BottledCloudLootListener implements ILootTableRegisterListener {
 
     @Override
     public void onDesertPyramidRegister(List<WeightedRandomChestContent> original) {
-        double probability = UBConfig.getBottledCloudDungeonChestProbability();
+        double probability = UBConfigs.bottledCloudDungeonChestProbability.getDoubleValue();
 
         if (probability > 0) {
             original.add(new WeightedRandomChestContent(
@@ -54,7 +54,7 @@ public class BottledCloudLootListener implements ILootTableRegisterListener {
 
     @Override
     public void onDungeonUnderworldRegister(List<WeightedRandomChestContent> original) {
-        double probability = UBConfig.getBottledCloudDungeonChestProbability();
+        double probability = UBConfigs.bottledCloudDungeonChestProbability.getDoubleValue();
 
         if (probability > 0) {
             original.add(new WeightedRandomChestContent(

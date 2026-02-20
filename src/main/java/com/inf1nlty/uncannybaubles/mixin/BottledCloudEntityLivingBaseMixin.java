@@ -2,7 +2,7 @@ package com.inf1nlty.uncannybaubles.mixin;
 
 import com.inf1nlty.uncannybaubles.client.UBSounds;
 import com.inf1nlty.uncannybaubles.item.UBItems;
-import com.inf1nlty.uncannybaubles.util.BaublesUtil;
+import baubles.api.BaubleSlotHelper;
 import net.minecraft.*;
 import org.objectweb.asm.Opcodes;
 import org.spongepowered.asm.mixin.Mixin;
@@ -62,6 +62,6 @@ public abstract class BottledCloudEntityLivingBaseMixin {
     private boolean canDoubleJump() {
         Entity self = (Entity) (Object) this;
         if (!(self instanceof EntityPlayer player)) return false;
-        return BaublesUtil.hasBaubleWorn(player, UBItems.bottled_cloud);
+        return BaubleSlotHelper.hasBeltOfType(player, UBItems.bottled_cloud);
     }
 }

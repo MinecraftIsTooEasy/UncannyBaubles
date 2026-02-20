@@ -8,7 +8,6 @@ import com.inf1nlty.uncannybaubles.item.UBItems;
 
 import com.google.common.eventbus.Subscribe;
 
-import com.inf1nlty.uncannybaubles.util.BaublesUtil;
 import net.minecraft.EntityPlayer;
 import net.minecraft.Packet250CustomPayload;
 import net.minecraft.ServerPlayer;

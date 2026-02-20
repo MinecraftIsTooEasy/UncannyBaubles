@@ -2,7 +2,7 @@ package com.inf1nlty.uncannybaubles.mixin;
 
 import com.inf1nlty.uncannybaubles.client.UBSounds;
 import com.inf1nlty.uncannybaubles.item.UBItems;
-import com.inf1nlty.uncannybaubles.util.BaublesUtil;
+import baubles.api.BaubleSlotHelper;
 import net.minecraft.*;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -17,7 +17,7 @@ public abstract class FierceKittySlippersPlayerMixin {
         EntityPlayer player = (EntityPlayer) (Object) this;
 
         if (cir.getReturnValue() != null && cir.getReturnValue().entityWasNegativelyAffected()) {
-            if (BaublesUtil.hasBaubleWorn(player, UBItems.fierce_kitty_slippers)) {
+            if (BaubleSlotHelper.hasFeetOfType(player, UBItems.fierce_kitty_slippers)) {
 
                 player.worldObj.playSoundAtEntity(
                     player,

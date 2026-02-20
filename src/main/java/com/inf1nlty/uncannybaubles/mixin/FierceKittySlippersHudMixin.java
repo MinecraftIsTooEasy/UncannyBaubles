@@ -1,8 +1,8 @@
 package com.inf1nlty.uncannybaubles.mixin;
 
+import baubles.api.BaubleSlotHelper;
 import com.inf1nlty.uncannybaubles.api.IFierceKittySlippersCooldown;
 import com.inf1nlty.uncannybaubles.item.UBItems;
-import com.inf1nlty.uncannybaubles.util.BaublesUtil;
 import net.minecraft.*;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
@@ -26,7 +26,7 @@ public abstract class FierceKittySlippersHudMixin extends Gui {
 
         EntityPlayer player = this.mc.thePlayer;
 
-        if (!BaublesUtil.hasBaubleWorn(player, UBItems.fierce_kitty_slippers)) {
+        if (!BaubleSlotHelper.hasFeetOfType(player, UBItems.fierce_kitty_slippers)) {
             return;
         }
 

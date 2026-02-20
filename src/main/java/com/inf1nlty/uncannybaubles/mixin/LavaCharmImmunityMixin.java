@@ -2,7 +2,7 @@ package com.inf1nlty.uncannybaubles.mixin;
 
 import com.inf1nlty.uncannybaubles.api.ILavaImmunity;
 import com.inf1nlty.uncannybaubles.item.UBItems;
-import com.inf1nlty.uncannybaubles.util.BaublesUtil;
+import baubles.api.BaubleSlotHelper;
 import net.minecraft.*;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
@@ -34,8 +34,8 @@ public abstract class LavaCharmImmunityMixin implements ILavaImmunity {
     private void ub$updateLavaImmunity(CallbackInfo ci) {
         EntityPlayer player = (EntityPlayer) (Object) this;
 
-        boolean hasLavaCharm = UBItems.lava_charm != null && BaublesUtil.hasBaubleWorn(player, UBItems.lava_charm);
-        boolean hasLavaBoots = UBItems.lava_walking_boots != null && BaublesUtil.hasBaubleWorn(player, UBItems.lava_walking_boots);
+        boolean hasLavaCharm = UBItems.lava_charm != null && BaubleSlotHelper.hasCharmOfType(player, UBItems.lava_charm);
+        boolean hasLavaBoots = UBItems.lava_walking_boots != null && BaubleSlotHelper.hasFeetOfType(player, UBItems.lava_walking_boots);
 
         if (hasLavaCharm || hasLavaBoots)
         {

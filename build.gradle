@@ -23,7 +23,7 @@ loom {
     mergedMinecraftJar()
     setFML(new File("${lib_dir}/${fml_file_name}${fml_version}.jar"))
     mods {
-        "StartWithTorch" {
+        "UncannyBaubles" {
             sourceSet sourceSets.main
         }
     }
@@ -42,7 +42,7 @@ dependencies {
 
     implementation files(loom.getFML().toPath())
 
-    implementation files("libs\\Baubles-1.1.0.jar")
+    implementation files("libs\\Baubles-1.1.1.jar")
     implementation files("libs\\ManyLib-2.2.2.jar")
     implementation files("libs\\/ModMenu-10.1.1.jar")
     implementation files("libs\\RustedIronCore-1.5.0.jar")

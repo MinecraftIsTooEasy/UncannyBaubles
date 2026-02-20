@@ -1,7 +1,7 @@
 package com.inf1nlty.uncannybaubles.mixin;
 
 import com.inf1nlty.uncannybaubles.item.UBItems;
-import com.inf1nlty.uncannybaubles.util.BaublesUtil;
+import baubles.api.BaubleSlotHelper;
 import net.minecraft.EntityLivingBase;
 import net.minecraft.EntityPlayer;
 import org.spongepowered.asm.mixin.Mixin;
@@ -18,7 +18,7 @@ public abstract class LuckyHorseshoeFallDamageMixin {
 
         if (!(entity instanceof EntityPlayer player)) return;
 
-        if (BaublesUtil.hasBaubleWorn(player, UBItems.lucky_horseshoe))
+        if (BaubleSlotHelper.hasFeetOfType(player, UBItems.lucky_horseshoe))
             ci.cancel();
     }
 }

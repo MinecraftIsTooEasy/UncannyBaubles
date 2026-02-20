@@ -1,7 +1,7 @@
 package com.inf1nlty.uncannybaubles.mixin;
 
 import com.inf1nlty.uncannybaubles.item.UBItems;
-import com.inf1nlty.uncannybaubles.util.BaublesUtil;
+import baubles.api.BaubleSlotHelper;
 import net.minecraft.*;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
@@ -59,7 +59,7 @@ public abstract class LavaWalkerEntityPlayerMixin {
     @Unique
     private boolean ub$canWalkOnLava(EntityPlayer player) {
         if (UBItems.lava_walking_boots == null) return false;
-        if (!BaublesUtil.hasBaubleWorn(player, UBItems.lava_walking_boots)) return false;
+        if (!BaubleSlotHelper.hasFeetOfType(player, UBItems.lava_walking_boots)) return false;
         return player.capabilities == null || !player.capabilities.isFlying;
     }
 

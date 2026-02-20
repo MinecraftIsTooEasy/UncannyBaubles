@@ -31,7 +31,7 @@
     "LuckyCloverEnchantmentHelperMixin",
     "LuckyHorseshoeFallDamageMixin",
     "MagnetEntityItemMixin",
-    "RegenRingFoodStatsMixin",
+    "RegenBraceletFoodStatsMixin",
     "WaterWalkerEntityPlayerMixin"
   ]
 }

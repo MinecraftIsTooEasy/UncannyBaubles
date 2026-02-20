@@ -1,7 +1,7 @@
 package com.inf1nlty.uncannybaubles.mixin;
 
+import baubles.api.BaubleSlotHelper;
 import com.inf1nlty.uncannybaubles.item.UBItems;
-import com.inf1nlty.uncannybaubles.util.BaublesUtil;
 import net.minecraft.EnchantmentHelper;
 import net.minecraft.EntityPlayer;
 import net.minecraft.FoodStats;
@@ -14,7 +14,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(FoodStats.class)
-public abstract class RegenRingFoodStatsMixin {
+public abstract class RegenBraceletFoodStatsMixin {
 
     @Shadow private int nutrition;
     @Shadow private EntityPlayer player;
@@ -40,7 +40,7 @@ public abstract class RegenRingFoodStatsMixin {
                 * (par1EntityPlayer.inBed() ? 4.0F : 1.0F)
                 * EnchantmentHelper.getRegenerationModifier(this.player);
 
-        if (UBItems.regen_bracelet != null && BaublesUtil.hasBaubleWorn(par1EntityPlayer, UBItems.regen_bracelet)) {
+        if (UBItems.regen_bracelet != null && BaubleSlotHelper.hasBraceletOfType(par1EntityPlayer, UBItems.regen_bracelet)) {
             float extra = baseIncrement * (RING_HEAL_PROGRESS_MULTIPLIER - 1.0f);
             this.heal_progress += extra;
         }

@@ -1,7 +1,7 @@
 package com.inf1nlty.uncannybaubles.mixin;
 
 import com.inf1nlty.uncannybaubles.item.UBItems;
-import com.inf1nlty.uncannybaubles.util.BaublesUtil;
+import baubles.api.BaubleSlotHelper;
 import net.minecraft.*;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -25,7 +25,7 @@ public abstract class KittySlippersCreeperSwellMixin {
 
         if (target instanceof EntityPlayer player) {
 
-            if (BaublesUtil.hasBaubleWorn(player, UBItems.kitty_slippers)) {
+            if (BaubleSlotHelper.hasFeetOfType(player, UBItems.kitty_slippers)) {
                 cir.setReturnValue(false);
             }
         }
@@ -42,7 +42,7 @@ public abstract class KittySlippersCreeperSwellMixin {
 
         if (target instanceof EntityPlayer player) {
 
-            if (BaublesUtil.hasBaubleWorn(player, UBItems.kitty_slippers)) {
+            if (BaubleSlotHelper.hasFeetOfType(player, UBItems.kitty_slippers)) {
                 if (this.swellingCreeper.getCreeperState() > 0) {
                     this.swellingCreeper.setCreeperState(-1);
                 }

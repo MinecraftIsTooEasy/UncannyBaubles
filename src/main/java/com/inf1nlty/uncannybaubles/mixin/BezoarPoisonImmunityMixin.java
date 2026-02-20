@@ -1,7 +1,7 @@
 package com.inf1nlty.uncannybaubles.mixin;
 
 import com.inf1nlty.uncannybaubles.item.UBItems;
-import com.inf1nlty.uncannybaubles.util.BaublesUtil;
+import baubles.api.BaubleSlotHelper;
 import net.minecraft.EntityLivingBase;
 import net.minecraft.EntityPlayer;
 import net.minecraft.Potion;
@@ -24,7 +24,7 @@ public abstract class BezoarPoisonImmunityMixin {
         if (player.worldObj == null || player.worldObj.isRemote) return;
 
         if (UBItems.bezoar == null) return;
-        if (!BaublesUtil.hasBaubleWorn(player, UBItems.bezoar)) return;
+        if (!BaubleSlotHelper.hasCharmOfType(player, UBItems.bezoar)) return;
 
         if (effect.getPotion() == Potion.poison) {
             ci.cancel();
@@ -39,7 +39,7 @@ public abstract class BezoarPoisonImmunityMixin {
         if (player.worldObj == null || player.worldObj.isRemote) return;
 
         if (UBItems.bezoar == null) return;
-        if (!BaublesUtil.hasBaubleWorn(player, UBItems.bezoar)) return;
+        if (!BaubleSlotHelper.hasCharmOfType(player, UBItems.bezoar)) return;
 
         if (player.isPotionActive(Potion.poison)) {
             int poisonId = Potion.poison.getId();

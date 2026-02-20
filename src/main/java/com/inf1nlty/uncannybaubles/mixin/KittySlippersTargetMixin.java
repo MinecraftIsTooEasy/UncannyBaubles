@@ -1,7 +1,7 @@
 package com.inf1nlty.uncannybaubles.mixin;
 
 import com.inf1nlty.uncannybaubles.item.UBItems;
-import com.inf1nlty.uncannybaubles.util.BaublesUtil;
+import baubles.api.BaubleSlotHelper;
 import net.minecraft.*;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -24,7 +24,7 @@ public abstract class KittySlippersTargetMixin extends EntityAITarget {
 
         EntityPlayer nearestPlayer = creeper.worldObj.getClosestPlayerToEntity(creeper, 16.0, false);
 
-        if (BaublesUtil.hasBaubleWorn(nearestPlayer, UBItems.kitty_slippers)) {
+        if (BaubleSlotHelper.hasFeetOfType(nearestPlayer, UBItems.kitty_slippers)) {
 
             cir.setReturnValue(false);
         }

@@ -2,7 +2,7 @@ package com.inf1nlty.uncannybaubles.mixin;
 
 import com.inf1nlty.uncannybaubles.api.ILavaImmunity;
 import com.inf1nlty.uncannybaubles.item.UBItems;
-import com.inf1nlty.uncannybaubles.util.BaublesUtil;
+import baubles.api.BaubleSlotHelper;
 import net.minecraft.EntityPlayer;
 import net.minecraft.Gui;
 import net.minecraft.GuiIngame;
@@ -29,8 +29,8 @@ public abstract class LavaImmunityHudMixin extends Gui {
 
         EntityPlayer player = this.mc.thePlayer;
 
-        boolean hasLavaCharm = UBItems.lava_charm != null && BaublesUtil.hasBaubleWorn(player, UBItems.lava_charm);
-        boolean hasLavaBoots = UBItems.lava_walking_boots != null && BaublesUtil.hasBaubleWorn(player, UBItems.lava_walking_boots);
+        boolean hasLavaCharm = UBItems.lava_charm != null && BaubleSlotHelper.hasCharmOfType(player, UBItems.lava_charm);
+        boolean hasLavaBoots = UBItems.lava_walking_boots != null && BaubleSlotHelper.hasFeetOfType(player, UBItems.lava_walking_boots);
 
         if (!hasLavaCharm && !hasLavaBoots) return;
 

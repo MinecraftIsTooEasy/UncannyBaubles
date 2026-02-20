@@ -1,9 +1,9 @@
 package com.inf1nlty.uncannybaubles.ai;
 
+import baubles.api.BaubleSlotHelper;
 import com.inf1nlty.uncannybaubles.api.IFierceKittySlippersCooldown;
 import com.inf1nlty.uncannybaubles.client.UBSounds;
 import com.inf1nlty.uncannybaubles.item.UBItems;
-import com.inf1nlty.uncannybaubles.util.BaublesUtil;
 import net.minecraft.*;
 
 public class EntityAIAvoidPlayerWithFierceKittySlippers extends EntityAIBase {
@@ -34,7 +34,7 @@ public class EntityAIAvoidPlayerWithFierceKittySlippers extends EntityAIBase {
             return false;
         }
 
-        if (!BaublesUtil.hasBaubleWorn(nearestPlayer, UBItems.fierce_kitty_slippers)) {
+        if (!BaubleSlotHelper.hasFeetOfType(nearestPlayer, UBItems.fierce_kitty_slippers)) {
             return false;
         }
 
@@ -97,7 +97,7 @@ public class EntityAIAvoidPlayerWithFierceKittySlippers extends EntityAIBase {
             return false;
         }
 
-        return BaublesUtil.hasBaubleWorn(this.targetPlayer, UBItems.fierce_kitty_slippers);
+        return BaubleSlotHelper.hasFeetOfType(this.targetPlayer, UBItems.fierce_kitty_slippers);
     }
 
     @Override

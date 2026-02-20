@@ -1,7 +1,7 @@
 package com.inf1nlty.uncannybaubles.ai;
 
 import com.inf1nlty.uncannybaubles.item.UBItems;
-import com.inf1nlty.uncannybaubles.util.BaublesUtil;
+import baubles.api.BaubleSlotHelper;
 import net.minecraft.*;
 
 public class EntityAIAvoidPlayerWithKittySlippers extends EntityAIBase {
@@ -32,7 +32,7 @@ public class EntityAIAvoidPlayerWithKittySlippers extends EntityAIBase {
             return false;
         }
 
-        if (!BaublesUtil.hasBaubleWorn(nearestPlayer, UBItems.kitty_slippers)) {
+        if (!BaubleSlotHelper.hasFeetOfType(nearestPlayer, UBItems.kitty_slippers)) {
             return false;
         }
 
@@ -85,7 +85,7 @@ public class EntityAIAvoidPlayerWithKittySlippers extends EntityAIBase {
             return false;
         }
 
-        return BaublesUtil.hasBaubleWorn(this.targetPlayer, UBItems.kitty_slippers);
+        return BaubleSlotHelper.hasFeetOfType(this.targetPlayer, UBItems.kitty_slippers);
     }
 
     @Override

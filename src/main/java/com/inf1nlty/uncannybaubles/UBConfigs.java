@@ -33,7 +33,7 @@ public class UBConfigs extends SimpleConfigs {
     );
 
     public static final ConfigDouble cowEternalSteakDropProbability = new ConfigDouble(
-        "uncannybaubles.cowEternalSteakDropProbability", 0.002, 0.0, 1.0,
+        "uncannybaubles.cowEternalSteakDropProbability", 0.0002, 0.0, 1.0,
         "uncannybaubles.cowEternalSteakDropProbability"
     );
 

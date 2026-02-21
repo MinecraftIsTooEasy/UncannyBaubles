@@ -42,16 +42,18 @@ dependencies {
 
     implementation files(loom.getFML().toPath())
 
-    implementation files("libs\\Baubles-1.1.1.jar")
-    implementation files("libs\\ManyLib-2.2.2.jar")
-    implementation files("libs\\/ModMenu-10.1.1.jar")
-    implementation files("libs\\RustedIronCore-1.5.0.jar")
+    implementation files("${lib_dir}/Baubles-1.1.1.jar")
+    implementation files("${lib_dir}/ManyLib-2.2.2.jar")
+    implementation files("${lib_dir}//ModMenu-10.1.1.jar")
+    implementation files("${lib_dir}/RustedIronCore-1.5.0.jar")
 
     //emi
-    implementation files("libs\\fastutil-8.5.12.jar")
-    implementation files("libs\\emi-1.1.24+1.6.4-MITE+fish.jar")
+    implementation files("${lib_dir}/fastutil-8.5.12.jar")
+    implementation files("${lib_dir}/emi-1.1.24+1.6.4-MITE+fish.jar")
 
-    implementation files("libs\\gson-2.10.1.jar")
+    implementation files("${lib_dir}/gson-2.10.1.jar")
+
+    compileOnly(files("${lib_dir}/MITE-ITF-Reborn-17.2.21-mc1.6.4-MITE-20260130.jar"))
 }
 
 processResources {

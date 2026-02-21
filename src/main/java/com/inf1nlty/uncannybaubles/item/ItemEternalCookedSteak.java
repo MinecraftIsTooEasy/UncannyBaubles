@@ -3,6 +3,7 @@ package com.inf1nlty.uncannybaubles.item;
 import baubles.creativetab.BaublesCreativeTab;
 import com.inf1nlty.uncannybaubles.UBConfigs;
 import com.inf1nlty.uncannybaubles.api.ICooldown;
+import com.inf1nlty.uncannybaubles.compat.ModCompat;
 import net.minecraft.*;
 import org.lwjgl.input.Keyboard;
 
@@ -35,6 +36,9 @@ public class ItemEternalCookedSteak extends ItemMeat {
     public void onItemUseFinish(ItemStack item_stack, World world, EntityPlayer player) {
         if (player.onServer()) {
             player.addFoodValue(this);
+            if (ModCompat.HAS_ITFRB) {
+                ModCompat.callITFRBFoodDataOnEaten(item_stack, player);
+            }
             world.playSoundAtEntity(player, "random.burp", 0.5F, world.rand.nextFloat() * 0.1F + 0.9F);
             this.onEaten(item_stack, world, player);
         }

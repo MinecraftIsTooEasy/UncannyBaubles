@@ -25,8 +25,8 @@ item.uncannybaubles:lava_walking_boots.info=可在水面和熔岩表面行走，
 item.lava_charm.name=熔岩护身符
 item.uncannybaubles:lava_charm.info=提供7秒火焰和岩浆免疫
 
-item.eternal_steak.name=永恒牛排
-item.eternal_cooked_steak.name=熟永恒牛排
+item.eternal_steak.name=永恒牛肉
+item.eternal_cooked_steak.name=永恒牛排
 item.uncannybaubles:eternal_steak.info=可无限食用，有一定冷却时间
 item.uncannybaubles:eternal_steak.cooldown=§b冷却时间： %d 秒
 

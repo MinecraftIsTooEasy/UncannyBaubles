@@ -19,6 +19,11 @@ public class ItemEternalCookedSteak extends ItemMeat {
     }
 
     @Override
+    public boolean isHarmedByAcid() {
+        return false;
+    }
+
+    @Override
     public float getCompostingValue() {
         return 0.0F;
     }

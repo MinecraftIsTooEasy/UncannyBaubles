@@ -99,8 +99,8 @@ config.comment.uncannybaubles.witchRegenRingDropProbability=女巫死亡掉落�
 config.name.uncannybaubles.cowEternalSteakDropProbability=永恒牛排
 config.comment.uncannybaubles.cowEternalSteakDropProbability=牛死亡掉落永恒牛排概率
 
-config.name.uncannybaubles.muleLuckyHorseshoeDropProbability=幸运马掌
-config.comment.uncannybaubles.muleLuckyHorseshoeDropProbability=骡子死亡掉落幸运马掌概率
+config.name.uncannybaubles.horseLuckyHorseshoeDropProbability=幸运马掌
+config.comment.uncannybaubles.horseLuckyHorseshoeDropProbability=骡子死亡掉落幸运马掌概率
 
 config.name.uncannybaubles.kittySlippersTempleChestProbability=猫咪拖鞋
 config.comment.uncannybaubles.kittySlippersTempleChestProbability=沙漠/丛林神庙箱子中找到猫咪拖鞋的概率

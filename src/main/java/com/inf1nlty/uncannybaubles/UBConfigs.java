@@ -13,7 +13,7 @@ public class UBConfigs extends SimpleConfigs {
 
     // Drop Probabilities
     public static final ConfigDouble luckyCloverDropProbability = new ConfigDouble(
-        "uncannybaubles.luckyCloverDropProbability", 0.001, 0.0, 1.0,
+        "uncannybaubles.luckyCloverDropProbability", 0.0001, 0.0, 1.0,
         "uncannybaubles.luckyCloverDropProbability"
     );
 
@@ -37,9 +37,9 @@ public class UBConfigs extends SimpleConfigs {
         "uncannybaubles.cowEternalSteakDropProbability"
     );
 
-    public static final ConfigDouble muleLuckyHorseshoeDropProbability = new ConfigDouble(
-        "uncannybaubles.muleLuckyHorseshoeDropProbability", 0.25, 0.0, 1.0,
-        "uncannybaubles.muleLuckyHorseshoeDropProbability"
+    public static final ConfigDouble horseLuckyHorseshoeDropProbability = new ConfigDouble(
+        "uncannybaubles.horseLuckyHorseshoeDropProbability", 0.05, 0.0, 1.0,
+        "uncannybaubles.horseLuckyHorseshoeDropProbability"
     );
 
     // Chest Loot Probabilities
@@ -64,7 +64,7 @@ public class UBConfigs extends SimpleConfigs {
     );
 
     public static final ConfigDouble bottledCloudDungeonChestProbability = new ConfigDouble(
-        "uncannybaubles.bottledCloudDungeonChestProbability", 0.15, 0.0, 1.0,
+        "uncannybaubles.bottledCloudDungeonChestProbability", 0.05, 0.0, 1.0,
         "uncannybaubles.bottledCloudDungeonChestProbability"
     );
 
@@ -80,7 +80,7 @@ public class UBConfigs extends SimpleConfigs {
 
     // Other Settings
     public static final ConfigInteger eternalSteakCooldownTicks = new ConfigInteger(
-        "uncannybaubles.eternalSteakCooldownTicks", 300, 0, 72000,
+        "uncannybaubles.eternalSteakCooldownTicks", 300, 0, 43200,
         "uncannybaubles.eternalSteakCooldownTicks"
     );
 
@@ -114,7 +114,7 @@ public class UBConfigs extends SimpleConfigs {
             fireElementalLavaCharmDropProbability,
             witchRegenRingDropProbability,
             cowEternalSteakDropProbability,
-            muleLuckyHorseshoeDropProbability
+                horseLuckyHorseshoeDropProbability
         );
 
         ChestLoot = List.of(

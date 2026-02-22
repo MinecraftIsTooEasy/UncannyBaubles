@@ -61,7 +61,7 @@ public class BottledCloudLootListener implements ILootTableRegisterListener {
                 new ItemStack(UBItems.bottled_cloud, 1),
                 1,
                 1,
-                2
+                1
             ));
         }
     }

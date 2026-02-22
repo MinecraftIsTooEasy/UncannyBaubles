@@ -59,16 +59,14 @@ public abstract class EntityLivingBaseDropBaublesMixin {
             }
         }
 
-        if (self instanceof EntityHorse horse) {
-            if (horse.getHorseType() == 2) {
+        if (self instanceof EntityHorse) {
                 if (UBItems.lucky_horseshoe != null) {
-                    double muleProb = UBConfigs.muleLuckyHorseshoeDropProbability.getDoubleValue();
+                    double muleProb = UBConfigs.horseLuckyHorseshoeDropProbability.getDoubleValue();
                     if (RandomUtil.rollChance(self.worldObj.rand, muleProb)) {
                         self.dropItem(UBItems.lucky_horseshoe);
                     }
                 }
             }
-        }
 
         if (UBItems.lucky_clover == null) return;
 

@@ -99,8 +99,8 @@ config.comment.uncannybaubles.witchRegenRingDropProbability=Drop chance of Regen
 config.name.uncannybaubles.cowEternalSteakDropProbability=Eternal Steak
 config.comment.uncannybaubles.cowEternalSteakDropProbability=Drop chance of Eternal Steak from cows
 
-config.name.uncannybaubles.muleLuckyHorseshoeDropProbability=Lucky Horseshoe
-config.comment.uncannybaubles.muleLuckyHorseshoeDropProbability=Drop chance of Lucky Horseshoe from mules
+config.name.uncannybaubles.horseLuckyHorseshoeDropProbability=Lucky Horseshoe
+config.comment.uncannybaubles.horseLuckyHorseshoeDropProbability=Drop chance of Lucky Horseshoe from mules
 
 config.name.uncannybaubles.kittySlippersTempleChestProbability=Kitty Slippers
 config.comment.uncannybaubles.kittySlippersTempleChestProbability=Chance to find in desert/jungle temple chests

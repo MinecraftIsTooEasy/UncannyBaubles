@@ -26,7 +26,7 @@ public class UBItems {
         magnet = new ItemMagnet(IdUtil.getNextItemID(), Material.iron);
         event.register("UncannyBaubles", "uncannybaubles:magnet", "magnet", magnet);
 
-        bottled_cloud = new ItemBottledCloud(IdUtil.getNextItemID(), Material.glass);
+        bottled_cloud = new ItemBottledCloud(IdUtil.getNextItemID(), Material.mithril);
         event.register("UncannyBaubles", "uncannybaubles:bottled_cloud", "bottled_cloud", bottled_cloud);
 
         pocket_piston = new ItemPocketPiston(IdUtil.getNextItemID(), Material.iron);

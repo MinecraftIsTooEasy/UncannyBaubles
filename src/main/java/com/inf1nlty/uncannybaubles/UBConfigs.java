@@ -33,7 +33,7 @@ public class UBConfigs extends SimpleConfigs {
     );
 
     public static final ConfigDouble cowEternalSteakDropProbability = new ConfigDouble(
-        "uncannybaubles.cowEternalSteakDropProbability", 0.0002, 0.0, 1.0,
+        "uncannybaubles.cowEternalSteakDropProbability", 0.002, 0.0, 1.0,
         "uncannybaubles.cowEternalSteakDropProbability"
     );
 
@@ -80,7 +80,7 @@ public class UBConfigs extends SimpleConfigs {
 
     // Other Settings
     public static final ConfigInteger eternalSteakCooldownTicks = new ConfigInteger(
-        "uncannybaubles.eternalSteakCooldownTicks", 300, 0, 43200,
+        "uncannybaubles.eternalSteakCooldownTicks", 600, 0, 43200,
         "uncannybaubles.eternalSteakCooldownTicks"
     );
 

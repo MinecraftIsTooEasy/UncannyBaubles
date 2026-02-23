@@ -1,4 +1,4 @@
-item.magnet.name=物品磁铁
+item.magnet.name=磁铁
 item.uncannybaubles:magnet.info=吸附附近的物品
 
 item.lucky_clover.name=幸运四叶草
@@ -74,11 +74,11 @@ emi.kitty_slippers.obtain=获取来源: 沙漠、丛林神庙
 emi.fierce_kitty_slippers.desc=类似猫咪拖鞋，但有10%概率\n扣血并失效5分钟。
 emi.fierce_kitty_slippers.obtain=获取来源: 主世界地牢
 
-emi.eternal_steak.desc=可以无限食用，有默认15秒的冷却
-emi.eternal_steak.obtain=获取来源: 牛默认0.2%的几率掉落
+emi.eternal_steak.desc=可以无限食用，有默认30秒的冷却
+emi.eternal_steak.obtain=获取来源: 牛默认0.2%的几率掉落, 屠夫也有概率出售
 
 emi.lucky_horseshoe.desc=完全免疫摔落伤害
-emi.lucky_horseshoe.obtain=获取来源: 骡子默认25%概率掉落\n(马和驴杂交)
+emi.lucky_horseshoe.obtain=获取来源: 所有马类默认5%概率掉落
 
 config.tab.drops=生物掉落概率
 config.tab.chests=箱子战利品概率
@@ -100,13 +100,13 @@ config.name.uncannybaubles.cowEternalSteakDropProbability=永恒牛排
 config.comment.uncannybaubles.cowEternalSteakDropProbability=牛死亡掉落永恒牛排概率
 
 config.name.uncannybaubles.horseLuckyHorseshoeDropProbability=幸运马掌
-config.comment.uncannybaubles.horseLuckyHorseshoeDropProbability=骡子死亡掉落幸运马掌概率
+config.comment.uncannybaubles.horseLuckyHorseshoeDropProbability=马类死亡掉落幸运马掌概率
 
 config.name.uncannybaubles.kittySlippersTempleChestProbability=猫咪拖鞋
 config.comment.uncannybaubles.kittySlippersTempleChestProbability=沙漠/丛林神庙箱子中找到猫咪拖鞋的概率
 
 config.name.uncannybaubles.fierceKittySlippersDungeonChestProbability=耄耋拖鞋
-config.comment.uncannybaubles.fierceKittySlippersDungeonChestProbability=地牢箱子中找到耄耋拖鞋的概率
+config.comment.uncannybaubles.fierceKittySlippersDungeonChestProbability=主世界地牢箱子中找到耄耋拖鞋的概率
 
 config.name.uncannybaubles.pocketPistonBlacksmithChestProbability=袖珍活塞
 config.comment.uncannybaubles.pocketPistonBlacksmithChestProbability=村庄铁匠铺箱子中找到袖珍活塞的概率

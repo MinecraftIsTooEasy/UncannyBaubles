@@ -12,6 +12,6 @@ public class ItemLavaWalker extends ItemBaseBaubles {
 
     @Override
     public BaubleType getBaubleType(ItemStack itemstack) {
-        return BaubleType.CHARM;
+        return BaubleType.FEET;
     }
 }

@@ -75,10 +75,10 @@ emi.fierce_kitty_slippers.desc=Like Kitty Slippers, but 10% chance\nto take dama
 emi.fierce_kitty_slippers.obtain=Source: Overworld dungeons
 
 emi.eternal_steak.desc=Infinitely edible with 15 second cooldown
-emi.eternal_steak.obtain=Source: 0.2% drop chance from cows
+emi.eternal_steak.obtain=Source: 0.2% drop chance from cows, The butcher also has a chance to sell.
 
 emi.lucky_horseshoe.desc=Complete immunity to fall damage
-emi.lucky_horseshoe.obtain=Source: 25% drop from mules\n(horse + donkey hybrid)
+emi.lucky_horseshoe.obtain=Source: 5% drop from all type of horses
 
 config.tab.drops=Drop Probabilities
 config.tab.chests=Chest Loot Probabilities
@@ -100,13 +100,13 @@ config.name.uncannybaubles.cowEternalSteakDropProbability=Eternal Steak
 config.comment.uncannybaubles.cowEternalSteakDropProbability=Drop chance of Eternal Steak from cows
 
 config.name.uncannybaubles.horseLuckyHorseshoeDropProbability=Lucky Horseshoe
-config.comment.uncannybaubles.horseLuckyHorseshoeDropProbability=Drop chance of Lucky Horseshoe from mules
+config.comment.uncannybaubles.horseLuckyHorseshoeDropProbability=Drop chance of Lucky Horseshoe from all types of horses
 
 config.name.uncannybaubles.kittySlippersTempleChestProbability=Kitty Slippers
 config.comment.uncannybaubles.kittySlippersTempleChestProbability=Chance to find in desert/jungle temple chests
 
 config.name.uncannybaubles.fierceKittySlippersDungeonChestProbability=Fierce Kitty Slippers
-config.comment.uncannybaubles.fierceKittySlippersDungeonChestProbability=Chance to find in dungeon chests
+config.comment.uncannybaubles.fierceKittySlippersDungeonChestProbability=Chance to find in overworld dungeon chests
 
 config.name.uncannybaubles.pocketPistonBlacksmithChestProbability=Pocket Piston
 config.comment.uncannybaubles.pocketPistonBlacksmithChestProbability=Chance to find in village blacksmith chests
@@ -115,7 +115,7 @@ config.name.uncannybaubles.lavaCharmFortressChestProbability=Lava Charm
 config.comment.uncannybaubles.lavaCharmFortressChestProbability=Chance to find in nether fortress chests
 
 config.name.uncannybaubles.bottledCloudDungeonChestProbability=Bottled Cloud
-config.comment.uncannybaubles.bottledCloudDungeonChestProbability=Chance to find in dungeon chests
+config.comment.uncannybaubles.bottledCloudDungeonChestProbability=Chance to find in underworld dungeon chests
 
 config.name.uncannybaubles.regenRingSwampHutChestProbability=Regen Bracelet
 config.comment.uncannybaubles.regenRingSwampHutChestProbability=Chance to find in swamp hut chests

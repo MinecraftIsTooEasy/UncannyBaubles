@@ -18,6 +18,7 @@
     "BezoarPoisonImmunityMixin",
     "BottledCloudEntityLivingBaseMixin",
     "EntityLivingBaseDropBaublesMixin",
+    "EntityPlayerResistantMixin",
     "EternalBeefCooldownMixin",
     "FierceKittySlippersCooldownMixin",
     "FierceKittySlippersCreeperMixin",

@@ -39,6 +39,9 @@ item.uncannybaubles:fierce_kitty_slippers.info=Creepers flee from you. 10% chanc
 item.lucky_horseshoe.name=Lucky Horseshoe
 item.uncannybaubles:lucky_horseshoe.info=Complete immunity to fall damage
 
+item.cross_necklace.name=Cross Necklace
+item.uncannybaubles:cross_necklace.info=Doubles the invincibility frames when equipped
+
 uncannybaubles.fierce_kitty_slippers.cooldown=§cFierce Kitty Slippers Cooldown: %d:%02d
 
 emi.lucky_clover.desc=When worn, grants Fortune/Looting/Butchering +1

@@ -43,6 +43,10 @@ dependencies {
 def fmlResolvedFile = configurations.fml.files.iterator().next()
 
 loom {
+    if (System.getProperty("os.name").toLowerCase().contains("mac")) {
+        runConfigs.named("client").get().getVmArgs().remove("-XstartOnFirstThread")
+    }
+
     accessWidenerPath = file("src/main/resources/uncannybaubles.accessWidener")
     mergedMinecraftJar()
 

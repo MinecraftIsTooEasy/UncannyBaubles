@@ -39,6 +39,9 @@ item.uncannybaubles:fierce_kitty_slippers.info=苦力怕会远离你。10%概率
 item.lucky_horseshoe.name=幸运马掌
 item.uncannybaubles:lucky_horseshoe.info=完全免疫摔落伤害
 
+item.cross_necklace.name=十字项链
+item.uncannybaubles:cross_necklace.info=装备后延长无敌帧时间（翻倍）
+
 uncannybaubles.fierce_kitty_slippers.cooldown=§c耄耋拖鞋冷却: %d:%02d
 
 emi.lucky_clover.desc=佩戴时，玩家获得1级时运/抢夺/屠宰附魔效果、

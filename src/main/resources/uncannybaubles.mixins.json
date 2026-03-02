@@ -15,12 +15,13 @@
     "defaultRequire": 1
   },
   "mixins": [
+    "EntityLivingBaseDropBaublesMixin",
     "accessor.EntityAccessor",
     "bezoar.BezoarPoisonImmunityMixin",
     "bottledcloud.BottledCloudEntityLivingBaseMixin",
-    "EntityLivingBaseDropBaublesMixin",
     "crossnecklace.CrossNecklaceResistantMixin",
     "eternalbeef.EternalBeefCooldownMixin",
+    "hermes.HermesBootsPlayerCapabilitiesMixin",
     "kittyslippers.FierceKittySlippersCooldownMixin",
     "kittyslippers.FierceKittySlippersCreeperMixin",
     "kittyslippers.FierceKittySlippersPlayerMixin",
@@ -33,8 +34,8 @@
     "luckyclover.LuckyCloverEnchantmentHelperMixin",
     "luckyclover.LuckyHorseshoeFallDamageMixin",
     "magnet.MagnetEntityItemMixin",
-    "regenbracelet.RegenBraceletFoodStatsMixin",
     "recipe.TileEntityFurnaceMixin",
+    "regenbracelet.RegenBraceletFoodStatsMixin",
     "waterwalker.WaterWalkerEntityPlayerMixin"
   ]
 }

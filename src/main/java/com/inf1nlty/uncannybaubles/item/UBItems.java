@@ -21,6 +21,7 @@ public class UBItems {
     public static ItemFierceKittySlippers fierce_kitty_slippers;
     public static ItemLuckyHorseshoe lucky_horseshoe;
     public static ItemCrossNecklace cross_necklace;
+    public static ItemHermesBoots hermes_boots;
 
     public static void registerItems(ItemRegistryEvent event) {
 
@@ -68,5 +69,8 @@ public class UBItems {
 
         cross_necklace = new ItemCrossNecklace(IdUtil.getNextItemID(), Material.iron);
         event.register("UncannyBaubles", "uncannybaubles:cross_necklace", "cross_necklace", cross_necklace);
+
+        hermes_boots = new ItemHermesBoots(IdUtil.getNextItemID(), Material.iron);
+        event.register("UncannyBaubles", "uncannybaubles:hermes_boots", "hermes_boots", hermes_boots);
     }
 }

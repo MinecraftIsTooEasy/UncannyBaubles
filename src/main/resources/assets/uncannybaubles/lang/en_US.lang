@@ -42,6 +42,9 @@ item.uncannybaubles:lucky_horseshoe.info=Complete immunity to fall damage
 item.cross_necklace.name=Cross Necklace
 item.uncannybaubles:cross_necklace.info=Doubles the invincibility frames when equipped
 
+item.hermes_boots.name=Hermes Boots
+item.uncannybaubles:hermes_boots.info=Continuous running will gradually increase running speed; when worn, it can automatically traverse blocks one block high.
+
 uncannybaubles.fierce_kitty_slippers.cooldown=§cFierce Kitty Slippers Cooldown: %d:%02d
 
 emi.lucky_clover.desc=When worn, grants Fortune/Looting/Butchering +1
@@ -83,6 +86,12 @@ emi.eternal_steak.obtain=Source: 0.2% drop chance from cows, The butcher also ha
 emi.lucky_horseshoe.desc=Complete immunity to fall damage
 emi.lucky_horseshoe.obtain=Source: 5% drop from all type of horses
 
+emi.cross_necklace.desc=Doubles the invincibility frames when equipped
+emi.cross_necklace.obtain=Source: Ancient Bone Lord has a default 5% drop rate.
+
+emi.hermes_boots.desc=Gain running speed by continuously running; eventually reaches a top boost. Grants auto-step of 1 block height when equipped.
+emi.hermes_boots.obtain=Source: Phase Spider has a default drop rate of 3%.
+
 config.tab.drops=Drop Probabilities
 config.tab.chests=Chest Loot Probabilities
 config.tab.other=Other Settings
@@ -107,6 +116,9 @@ config.comment.uncannybaubles.horseLuckyHorseshoeDropProbability=Drop chance of 
 
 config.name.uncannybaubles.ancientBoneLordNecklaceDropProbability=Cross Necklace
 config.comment.uncannybaubles.ancientBoneLordNecklaceDropProbability=Drop chance of Cross Necklace from Ancient Bone Lord
+
+config.name.uncannybaubles.hermesBootsPhaseSpiderDropProbability=Hermes Boots
+config.comment.uncannybaubles.hermesBootsPhaseSpiderDropProbability=Drop chance of Hermes Boots from Phase Spiders
 
 config.name.uncannybaubles.kittySlippersTempleChestProbability=Kitty Slippers
 config.comment.uncannybaubles.kittySlippersTempleChestProbability=Chance to find in desert/jungle temple chests

@@ -47,6 +47,11 @@ public class UBConfigs extends SimpleConfigs {
         "uncannybaubles.ancientBoneLordNecklaceDropProbability"
     );
 
+    public static final ConfigDouble hermesBootsPhaseSpiderDropProbability = new ConfigDouble(
+        "uncannybaubles.hermesBootsPhaseSpiderDropProbability", 0.05, 0.0, 1.0,
+        "uncannybaubles.hermesBootsPhaseSpiderDropProbability"
+    );
+
     public static final ConfigDouble kittySlippersTempleChestProbability = new ConfigDouble(
         "uncannybaubles.kittySlippersTempleChestProbability", 0.20, 0.0, 1.0,
         "uncannybaubles.kittySlippersTempleChestProbability"
@@ -119,7 +124,8 @@ public class UBConfigs extends SimpleConfigs {
             witchRegenRingDropProbability,
             cowEternalSteakDropProbability,
             horseLuckyHorseshoeDropProbability,
-            ancientBoneLordNecklaceDropProbability
+            ancientBoneLordNecklaceDropProbability,
+            hermesBootsPhaseSpiderDropProbability
         );
 
         ChestLoot = List.of(

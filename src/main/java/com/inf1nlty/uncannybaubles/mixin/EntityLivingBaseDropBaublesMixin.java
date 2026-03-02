@@ -68,6 +68,15 @@ public abstract class EntityLivingBaseDropBaublesMixin {
                 }
             }
 
+        if (self instanceof EntityPhaseSpider) {
+            if (UBItems.hermes_boots != null) {
+                double prob = UBConfigs.hermesBootsPhaseSpiderDropProbability.getDoubleValue();
+                if (RandomUtil.rollChance(self.worldObj.rand, prob)) {
+                    self.dropItem(UBItems.hermes_boots);
+                }
+            }
+        }
+
         if (self instanceof EntityAncientBoneLord) {
             if (UBItems.cross_necklace != null) {
                 double prob = UBConfigs.ancientBoneLordNecklaceDropProbability.getDoubleValue();

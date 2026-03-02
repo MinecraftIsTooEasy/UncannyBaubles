@@ -1,4 +1,4 @@
-package com.inf1nlty.uncannybaubles.mixin;
+package com.inf1nlty.uncannybaubles.mixin.luckyclover;
 
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import com.llamalad7.mixinextras.sugar.Local;

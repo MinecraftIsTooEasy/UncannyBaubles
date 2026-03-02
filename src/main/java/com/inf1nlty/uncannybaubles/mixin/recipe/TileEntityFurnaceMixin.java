@@ -1,4 +1,4 @@
-package com.inf1nlty.uncannybaubles.mixin;
+package com.inf1nlty.uncannybaubles.mixin.recipe;
 
 import com.inf1nlty.uncannybaubles.item.UBItems;
 import net.minecraft.TileEntityFurnace;

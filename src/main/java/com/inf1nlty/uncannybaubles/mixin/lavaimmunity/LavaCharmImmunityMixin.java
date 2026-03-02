@@ -1,4 +1,4 @@
-package com.inf1nlty.uncannybaubles.mixin;
+package com.inf1nlty.uncannybaubles.mixin.lavaimmunity;
 
 import com.inf1nlty.uncannybaubles.api.ILavaImmunity;
 import com.inf1nlty.uncannybaubles.item.UBItems;

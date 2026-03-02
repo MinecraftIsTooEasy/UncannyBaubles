@@ -1,4 +1,4 @@
-package com.inf1nlty.uncannybaubles.mixin;
+package com.inf1nlty.uncannybaubles.mixin.waterwalker;
 
 import com.inf1nlty.uncannybaubles.item.UBItems;
 import baubles.api.BaubleSlotHelper;
@@ -10,37 +10,30 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(EntityPlayer.class)
-public abstract class LavaWalkerEntityPlayerMixin {
+public abstract class WaterWalkerEntityPlayerMixin {
 
     @Inject(method = "onUpdate", at = @At("HEAD"))
-    private void ub$lavaWalk(CallbackInfo ci) {
+    private void ub$waterWalk(CallbackInfo ci) {
         EntityPlayer player = (EntityPlayer) (Object) this;
         if (player == null || player.worldObj == null) return;
-        if (!ub$canWalkOnLava(player)) return;
+        if (!ub$canWalkOnWater(player)) return;
         if (player.isSneaking()) return;
 
         int x = player.getBlockPosX();
         int z = player.getBlockPosZ();
         int startY = MathHelper.floor_double(player.posY);
 
-        int surfaceY = ub$findLavaSurface(player.worldObj, x, startY, z);
-        Material surfaceMaterial = Material.lava;
+        int waterSurfaceY = ub$findWaterSurface(player.worldObj, x, startY, z);
+        if (waterSurfaceY < 0) return;
 
-        if (surfaceY < 0) {
-            surfaceY = ub$findWaterSurface(player.worldObj, x, startY, z);
-            surfaceMaterial = Material.water;
-        }
+        Block surfaceBlock = player.worldObj.getBlock(x, waterSurfaceY, z);
+        if (surfaceBlock == null || surfaceBlock.blockMaterial != Material.water) return;
 
-        if (surfaceY < 0) return;
-
-        Block surfaceBlock = player.worldObj.getBlock(x, surfaceY, z);
-        if (surfaceBlock == null || surfaceBlock.blockMaterial != surfaceMaterial) return;
-
-        int meta = player.worldObj.getBlockMetadata(x, surfaceY, z);
+        int meta = player.worldObj.getBlockMetadata(x, waterSurfaceY, z);
         if (meta >= 8) meta = 0;
 
-        double liquidHeight = 1.0D - (meta / 8.0D);
-        double targetY = surfaceY + liquidHeight + 0.08D;
+        double waterHeight = 1.0D - (meta / 8.0D);
+        double targetY = waterSurfaceY + waterHeight + 0.08D;
         double distanceToSurface = player.posY - targetY;
 
         if (distanceToSurface > 1.5D) return;
@@ -57,43 +50,10 @@ public abstract class LavaWalkerEntityPlayerMixin {
     }
 
     @Unique
-    private boolean ub$canWalkOnLava(EntityPlayer player) {
-        if (UBItems.lava_walking_boots == null) return false;
-        if (!BaubleSlotHelper.hasFeetOfType(player, UBItems.lava_walking_boots)) return false;
+    private boolean ub$canWalkOnWater(EntityPlayer player) {
+        if (UBItems.water_walking_boots == null) return false;
+        if (!BaubleSlotHelper.hasFeetOfType(player, UBItems.water_walking_boots)) return false;
         return player.capabilities == null || !player.capabilities.isFlying;
-    }
-
-    @Unique
-    private int ub$findLavaSurface(World world, int x, int startY, int z) {
-        int maxHeight = world.getHeight();
-
-        for (int dy = 0; dy <= 6; dy++) {
-            int checkY = startY - dy;
-            if (checkY < 0) break;
-
-            Block block = world.getBlock(x, checkY, z);
-            if (block != null && block.blockMaterial == Material.lava) {
-                Block blockAbove = checkY + 1 < maxHeight ? world.getBlock(x, checkY + 1, z) : null;
-                if (blockAbove == null || blockAbove.blockMaterial != Material.lava) {
-                    return checkY;
-                }
-            }
-        }
-
-        for (int dy = 1; dy <= 6; dy++) {
-            int checkY = startY + dy;
-            if (checkY >= maxHeight) break;
-
-            Block block = world.getBlock(x, checkY, z);
-            if (block != null && block.blockMaterial == Material.lava) {
-                Block blockAbove = checkY + 1 < maxHeight ? world.getBlock(x, checkY + 1, z) : null;
-                if (blockAbove == null || blockAbove.blockMaterial != Material.lava) {
-                    return checkY;
-                }
-            }
-        }
-
-        return -1;
     }
 
     @Unique

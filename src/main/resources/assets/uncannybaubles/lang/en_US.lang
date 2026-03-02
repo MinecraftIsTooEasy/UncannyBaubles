@@ -105,6 +105,9 @@ config.comment.uncannybaubles.cowEternalSteakDropProbability=Drop chance of Eter
 config.name.uncannybaubles.horseLuckyHorseshoeDropProbability=Lucky Horseshoe
 config.comment.uncannybaubles.horseLuckyHorseshoeDropProbability=Drop chance of Lucky Horseshoe from all types of horses
 
+config.name.uncannybaubles.ancientBoneLordNecklaceDropProbability=Cross Necklace
+config.comment.uncannybaubles.ancientBoneLordNecklaceDropProbability=Drop chance of Cross Necklace from Ancient Bone Lord
+
 config.name.uncannybaubles.kittySlippersTempleChestProbability=Kitty Slippers
 config.comment.uncannybaubles.kittySlippersTempleChestProbability=Chance to find in desert/jungle temple chests
 

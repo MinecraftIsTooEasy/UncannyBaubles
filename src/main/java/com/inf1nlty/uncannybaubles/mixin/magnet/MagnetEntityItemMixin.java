@@ -1,4 +1,4 @@
-package com.inf1nlty.uncannybaubles.mixin;
+package com.inf1nlty.uncannybaubles.mixin.magnet;
 
 import com.inf1nlty.uncannybaubles.api.IAttractableItem;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;

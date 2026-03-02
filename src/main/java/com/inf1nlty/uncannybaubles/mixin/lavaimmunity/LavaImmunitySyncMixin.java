@@ -1,6 +1,6 @@
-package com.inf1nlty.uncannybaubles.mixin;
+package com.inf1nlty.uncannybaubles.mixin.lavaimmunity;
 
-import com.inf1nlty.uncannybaubles.api.ICooldown;
+import com.inf1nlty.uncannybaubles.api.ILavaImmunity;
 import net.minecraft.EntityPlayer;
 import net.minecraft.Minecraft;
 import net.minecraft.NetClientHandler;
@@ -15,23 +15,20 @@ import java.io.ByteArrayInputStream;
 import java.io.DataInputStream;
 
 @Mixin(NetClientHandler.class)
-public abstract class EternalBeefSyncMixin {
+public abstract class LavaImmunitySyncMixin {
 
     @Shadow private Minecraft mc;
 
     @Inject(method = "handleCustomPayload", at = @At("HEAD"))
-    private void ub$handleEternalBeefSync(Packet250CustomPayload packet, CallbackInfo ci) throws Exception {
-
+    private void ub$handleLavaImmunitySync(Packet250CustomPayload packet, CallbackInfo ci) throws Exception {
         if (packet == null || this.mc.thePlayer == null) return;
 
-        if ("UB|SteakCD".equals(packet.channel)) {
-
+        if ("UB|LavaImm".equals(packet.channel)) {
             EntityPlayer player = this.mc.thePlayer;
-
-            if (player instanceof ICooldown cooldown) {
+            if (player instanceof ILavaImmunity immunity) {
                 ByteArrayInputStream bis = new ByteArrayInputStream(packet.data);
                 DataInputStream dis = new DataInputStream(bis);
-                cooldown.ub$setEternalBeefCooldown(dis.readInt());
+                immunity.ub$setLavaImmunityTicks(dis.readInt());
             }
         }
     }

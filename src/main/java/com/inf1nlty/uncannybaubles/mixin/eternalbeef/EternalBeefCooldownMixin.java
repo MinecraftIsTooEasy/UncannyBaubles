@@ -1,4 +1,4 @@
-package com.inf1nlty.uncannybaubles.mixin;
+package com.inf1nlty.uncannybaubles.mixin.eternalbeef;
 
 import com.inf1nlty.uncannybaubles.api.ICooldown;
 import com.inf1nlty.uncannybaubles.item.ItemEternalCookedSteak;

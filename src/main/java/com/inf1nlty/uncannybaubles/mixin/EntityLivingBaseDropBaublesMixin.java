@@ -68,6 +68,15 @@ public abstract class EntityLivingBaseDropBaublesMixin {
                 }
             }
 
+        if (self instanceof EntityAncientBoneLord) {
+            if (UBItems.cross_necklace != null) {
+                double prob = UBConfigs.ancientBoneLordNecklaceDropProbability.getDoubleValue();
+                if (RandomUtil.rollChance(self.worldObj.rand, prob)) {
+                    self.dropItem(UBItems.cross_necklace);
+                }
+            }
+        }
+
         if (UBItems.lucky_clover == null) return;
 
         double probability = UBConfigs.luckyCloverDropProbability.getDoubleValue();

@@ -1,4 +1,4 @@
-package com.inf1nlty.uncannybaubles.mixin;
+package com.inf1nlty.uncannybaubles.mixin.kittyslippers;
 
 import com.inf1nlty.uncannybaubles.client.UBSounds;
 import com.inf1nlty.uncannybaubles.item.UBItems;

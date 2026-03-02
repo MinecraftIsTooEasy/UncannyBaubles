@@ -1,4 +1,4 @@
-package com.inf1nlty.uncannybaubles.mixin;
+package com.inf1nlty.uncannybaubles.mixin.kittyslippers;
 
 import baubles.api.BaubleSlotHelper;
 import com.inf1nlty.uncannybaubles.api.IFierceKittySlippersCooldown;

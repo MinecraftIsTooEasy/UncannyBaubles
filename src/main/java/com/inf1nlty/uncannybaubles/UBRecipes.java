@@ -14,12 +14,8 @@ public class UBRecipes {
         event.registerShapedRecipe(new ItemStack(UBItems.magnet, 1), false, "IIL", "I  ", "IIR", 'I', Item.ingotIron, 'L', new ItemStack(Item.dyePowder, 1, 4), 'R', Item.redstone);
         event.registerShapelessRecipe(new ItemStack(UBItems.lava_walking_boots, 1), false, UBItems.water_walking_boots, UBItems.lava_charm);
         event.registerShapedRecipe(new ItemStack(UBItems.bottled_cloud, 1), false, "GQG", "GMG", "GCG", 'G', Block.glass, 'Q', Item.netherQuartz, 'M', Item.bootsMithril, 'C', Block.cloth);
+        event.registerShapedRecipe(new ItemStack(UBItems.broken_ankh, 1), false, "ADA", "ASA", "ADA", 'A', Item.ingotAdamantium, 'D', Block.blockDiamond, 'S', Item.netherStar);
 
-        if (UBItems.eternal_steak != null && UBItems.eternal_cooked_steak != null) {
-            FurnaceRecipes.smelting().addSmelting(
-                UBItems.eternal_steak.itemID,
-                new ItemStack(UBItems.eternal_cooked_steak)
-            );
-        }
+        FurnaceRecipes.smelting().addSmelting(UBItems.eternal_steak.itemID, new ItemStack(UBItems.eternal_cooked_steak));
     }
 }

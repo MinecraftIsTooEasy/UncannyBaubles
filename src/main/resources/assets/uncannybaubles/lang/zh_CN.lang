@@ -45,8 +45,8 @@ item.uncannybaubles:cross_necklace.info=装备后翻倍无敌帧时间
 item.hermes_boots.name=赫尔墨斯靴
 item.uncannybaubles:hermes_boots.info=持续奔跑会逐渐增加奔跑速度，佩戴时可跨越1格高度方块
 
-item.broken_ankh.name=损坏的生命护符
-item.uncannybaubles:broken_ankh.info=佩戴时，受到致命伤害时取消死亡，并获得伤害吸收 IV、再生 II、抗性提升 III 各11秒效果。冷却时间30分钟。
+item.broken_ankh.name=损坏的安卡护符
+item.uncannybaubles:broken_ankh.info=佩戴时，受到致命伤害时获得春哥BUFF。冷却时间30分钟。
 item.uncannybaubles:broken_ankh.cooldown=§b冷却时间： %d:%02d
 
 uncannybaubles.fierce_kitty_slippers.cooldown=§c耄耋拖鞋冷却: %d:%02d

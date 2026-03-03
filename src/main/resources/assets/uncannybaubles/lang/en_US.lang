@@ -2,7 +2,7 @@ item.magnet.name=Magnet
 item.uncannybaubles:magnet.info=Attract nearby items
 
 item.lucky_clover.name=Lucky Clover
-item.uncannybaubles:lucky_clover.info=Adds 1 level to Fortune/Looting/Butchering enchantment effects.
+item.uncannybaubles:lucky_clover.info=Adds an additional level 1 to the Fortune/Looting/Slaughter enchantment effect, and grants additional corresponding special items upon killing creatures.
 
 item.bottled_cloud.name=Bottled Cloud
 item.uncannybaubles:bottled_cloud.info=Allow Double jump
@@ -54,7 +54,7 @@ item.uncannybaubles:digging_claws.info=Allows bare-hand mining of stone/cobblest
 
 uncannybaubles.fierce_kitty_slippers.cooldown=§cFierce Kitty Slippers Cooldown: %d:%02d
 
-emi.lucky_clover.desc=When worn, grants Fortune/Looting/Butchering +1
+emi.lucky_clover.desc=Adds an additional level 1 to the Fortune/Looting/Slaughter enchantment effect, and grants additional corresponding special items upon killing creatures.
 emi.lucky_clover.obtain=Source: 0.1% drop chance from all creatures
 
 emi.bezoar.desc=Grants immunity to poison effects when worn.

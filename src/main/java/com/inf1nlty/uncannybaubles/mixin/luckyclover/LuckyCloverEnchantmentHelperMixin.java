@@ -13,7 +13,7 @@ public class LuckyCloverEnchantmentHelperMixin {
 
     @ModifyReturnValue(method = "getFortuneModifier", at = @At("RETURN"))
     private static int moreFortune(int original, @Local(argsOnly = true) EntityLivingBase entity) {
-        if (entity instanceof EntityPlayer player && BaubleSlotHelper.hasAmuletOfType(player, UBItems.lucky_clover)) {
+        if (entity instanceof EntityPlayer player && BaubleSlotHelper.hasHeadOfType(player, UBItems.lucky_clover)) {
             original += 1;
         }
         return original;
@@ -21,7 +21,7 @@ public class LuckyCloverEnchantmentHelperMixin {
 
     @ModifyReturnValue(method = "getLootingModifier", at = @At("RETURN"))
     private static int moreLoot(int original, @Local(argsOnly = true) EntityLivingBase entity) {
-        if (entity instanceof EntityPlayer player && BaubleSlotHelper.hasAmuletOfType(player, UBItems.lucky_clover)) {
+        if (entity instanceof EntityPlayer player && BaubleSlotHelper.hasHeadOfType(player, UBItems.lucky_clover)) {
             original += 1;
         }
         return original;
@@ -29,7 +29,7 @@ public class LuckyCloverEnchantmentHelperMixin {
 
     @ModifyReturnValue(method = "getButcheringModifier", at = @At("RETURN"))
     private static int moreButcher(int original, @Local(argsOnly = true) EntityLivingBase entity) {
-        if (entity instanceof EntityPlayer player && BaubleSlotHelper.hasAmuletOfType(player, UBItems.lucky_clover)) {
+        if (entity instanceof EntityPlayer player && BaubleSlotHelper.hasHeadOfType(player, UBItems.lucky_clover)) {
             original += 1;
         }
         return original;

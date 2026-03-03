@@ -1,4 +1,4 @@
-package com.inf1nlty.uncannybaubles.mixin.hermes;
+package com.inf1nlty.uncannybaubles.mixin.hermesboots;
 
 import baubles.api.BaubleSlotHelper;
 import com.inf1nlty.uncannybaubles.client.UBSounds;

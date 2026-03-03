@@ -1,5 +1,6 @@
 package com.inf1nlty.uncannybaubles;
 
+import com.inf1nlty.uncannybaubles.api.IBrokenAnkhCooldown;
 import com.inf1nlty.uncannybaubles.api.ICooldown;
 import com.inf1nlty.uncannybaubles.api.IFierceKittySlippersCooldown;
 import com.inf1nlty.uncannybaubles.api.ILavaImmunity;
@@ -35,6 +36,8 @@ public class UBFMLEvents {
     public void registerSounds(SoundsRegisterEvent event) {
         event.registerSound(UBSounds.fierce_kitty_slippers, 3);
         event.registerSound(UBSounds.double_jump);
+        event.registerSound(UBSounds.hermes_boots_run);
+        event.registerSound(UBSounds.broken_ankh_totem);
     }
 
     @Subscribe
@@ -78,6 +81,18 @@ public class UBFMLEvents {
                 dos.writeInt(fierceCooldownTicks);
                 player.playerNetServerHandler.sendPacketToPlayer(
                     new Packet250CustomPayload("UB|FierceCD", bos.toByteArray())
+                );
+            } catch (Exception ignored) {}
+        }
+
+        if (entityPlayer instanceof IBrokenAnkhCooldown ankhCooldown) {
+            try {
+                int ticks = ankhCooldown.ub$getBrokenAnkhCooldown();
+                ByteArrayOutputStream bos = new ByteArrayOutputStream();
+                DataOutputStream dos = new DataOutputStream(bos);
+                dos.writeInt(ticks);
+                player.playerNetServerHandler.sendPacketToPlayer(
+                    new Packet250CustomPayload("UB|AnkhCD", bos.toByteArray())
                 );
             } catch (Exception ignored) {}
         }

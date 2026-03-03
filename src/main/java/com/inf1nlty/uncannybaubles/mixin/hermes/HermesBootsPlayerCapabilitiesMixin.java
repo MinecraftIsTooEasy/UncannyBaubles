@@ -1,6 +1,7 @@
 package com.inf1nlty.uncannybaubles.mixin.hermes;
 
 import baubles.api.BaubleSlotHelper;
+import com.inf1nlty.uncannybaubles.client.UBSounds;
 import com.inf1nlty.uncannybaubles.item.UBItems;
 import net.minecraft.EntityLivingBase;
 import net.minecraft.EntityPlayer;
@@ -14,12 +15,13 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(EntityLivingBase.class)
 public abstract class HermesBootsPlayerCapabilitiesMixin {
 
-
     @Unique private int ub$moveProgress = 0;
+    @Unique private int ub$soundTimer = 0;
 
     @Unique private static final int MAX_TICKS = 60;
     @Unique private static final int DECAY_TICKS = 4;
     @Unique private static final double MAX_BOOST = 1.0;
+    @Unique private static final int SOUND_THRESHOLD = (int)(MAX_TICKS * 0.8);
 
     @Inject(method = "onLivingUpdate", at = @At("HEAD"))
     private void ub$hermesUpdate(CallbackInfo ci) {
@@ -41,15 +43,27 @@ public abstract class HermesBootsPlayerCapabilitiesMixin {
 
         player.stepHeight = Math.max(player.stepHeight, 1.0F);
 
-        boolean pressingMove = player.isSprinting() && player.onGround;
+        boolean sprinting = player.isSprinting() && player.onGround;
 
-        if (pressingMove)
+        if (sprinting)
         {
             if (ub$moveProgress < MAX_TICKS) ub$moveProgress++;
         }
         else
         {
             ub$moveProgress = Math.max(0, ub$moveProgress - DECAY_TICKS);
+            ub$soundTimer = 0;
+        }
+
+        if (sprinting && ub$moveProgress >= SOUND_THRESHOLD && !player.worldObj.isRemote)
+        {
+            ub$soundTimer++;
+
+            if (ub$soundTimer >= 4)
+            {
+                ub$soundTimer = 0;
+                player.worldObj.playSoundAtEntity(player, UBSounds.hermes_boots_run.toString(), 0.35F, 0.9F + player.worldObj.rand.nextFloat() * 0.2F);
+            }
         }
     }
 

@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(EntityPlayer.class)
-public abstract class LavaCharmImmunityMixin implements ILavaImmunity {
+public abstract class LavaImmunityMixin implements ILavaImmunity {
 
     @Unique
     private int ub$lavaImmunityTicks = 0;

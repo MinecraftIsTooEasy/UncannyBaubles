@@ -41,6 +41,11 @@ public abstract class EternalBeefCooldownMixin implements ICooldown {
         }
     }
 
+    @Override
+    public void ub$setEternalBeefCooldownRaw(int ticks) {
+        this.ub$eternalBeefCooldown = Math.max(0, ticks);
+    }
+
     @Unique
     private void ub$syncCooldownToClient(ServerPlayer player) throws Exception {
         ByteArrayOutputStream bos = new ByteArrayOutputStream();

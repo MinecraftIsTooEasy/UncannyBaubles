@@ -45,6 +45,10 @@ item.uncannybaubles:cross_necklace.info=Doubles the invincibility frames when eq
 item.hermes_boots.name=Hermes Boots
 item.uncannybaubles:hermes_boots.info=Continuous running will gradually increase running speed; when worn, it can automatically traverse blocks one block high.
 
+item.broken_ankh.name=Broken Ankh
+item.uncannybaubles:broken_ankh.info=When worn, grants a second chance at death. Upon receiving a lethal blow, negates the killing blow and grants Absorption IV, Regeneration II, and Resistance III for 11 seconds. Has a 30-minute cooldown.
+item.uncannybaubles:broken_ankh.cooldown=§bCooldown: %d:%02d
+
 uncannybaubles.fierce_kitty_slippers.cooldown=§cFierce Kitty Slippers Cooldown: %d:%02d
 
 emi.lucky_clover.desc=When worn, grants Fortune/Looting/Butchering +1

@@ -38,6 +38,7 @@ public class UBFMLEvents {
         event.registerSound(UBSounds.double_jump);
         event.registerSound(UBSounds.hermes_boots_run);
         event.registerSound(UBSounds.broken_ankh_totem);
+        event.registerSound(UBSounds.digging_claws_dig,3);
     }
 
     @Subscribe

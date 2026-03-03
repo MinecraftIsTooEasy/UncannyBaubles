@@ -49,6 +49,9 @@ item.broken_ankh.name=Broken Ankh
 item.uncannybaubles:broken_ankh.info=When worn, grants one lifesaving effect: the wearer survives one lethal attack, is briefly protected, and then receives powerful buffs. 30‑minute cooldown.
 item.uncannybaubles:broken_ankh.cooldown=§bCooldown: %d:%02d
 
+item.digging_claws.name=Digging Claws
+item.uncannybaubles:digging_claws.info=Allows bare-hand mining of stone/cobblestone material blocks when worn.\nMining any stone-material block has a chance to drop Digging Claws itself.
+
 uncannybaubles.fierce_kitty_slippers.cooldown=§cFierce Kitty Slippers Cooldown: %d:%02d
 
 emi.lucky_clover.desc=When worn, grants Fortune/Looting/Butchering +1
@@ -96,6 +99,12 @@ emi.cross_necklace.obtain=Source: Ancient Bone Lord has a default 5% drop rate.
 emi.hermes_boots.desc=Gain running speed by continuously running; eventually reaches a top boost. Grants auto-step of 1 block height when equipped.
 emi.hermes_boots.obtain=Source: Phase Spider has a default drop rate of 3%.
 
+emi.broken_ankh.desc=Prevents death once, granting Absorption IV,\nRegeneration III and Resistance III for 11s.\n30 minutes cooldown.
+emi.broken_ankh.obtain=Source: Crafted (Diamond Blocks + Nether Star + Adamantite)
+
+emi.digging_claws.desc=Allows bare-hand mining of stone/cobblestone\nmaterial blocks when worn.\nMining stone-material blocks has a small chance\nto drop Digging Claws.
+emi.digging_claws.obtain=Source: Mining stone-material blocks (default 1% drop chance)
+
 config.tab.drops=Drop Probabilities
 config.tab.chests=Chest Loot Probabilities
 config.tab.other=Other Settings
@@ -123,6 +132,9 @@ config.comment.uncannybaubles.ancientBoneLordNecklaceDropProbability=Drop chance
 
 config.name.uncannybaubles.hermesBootsPhaseSpiderDropProbability=Hermes Boots
 config.comment.uncannybaubles.hermesBootsPhaseSpiderDropProbability=Drop chance of Hermes Boots from Phase Spiders
+
+config.name.uncannybaubles.diggingClawsStoneDropProbability=Digging Claws
+config.comment.uncannybaubles.diggingClawsStoneDropProbability=Chance to drop Digging Claws when mining stone-material blocks
 
 config.name.uncannybaubles.kittySlippersTempleChestProbability=Kitty Slippers
 config.comment.uncannybaubles.kittySlippersTempleChestProbability=Chance to find in desert/jungle temple chests

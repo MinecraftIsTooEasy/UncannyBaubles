@@ -23,6 +23,7 @@ public class UBItems {
     public static ItemCrossNecklace cross_necklace;
     public static ItemHermesBoots hermes_boots;
     public static ItemBrokenAnkh broken_ankh;
+    public static ItemDiggingClaws digging_claws;
 
     public static void registerItems(ItemRegistryEvent event) {
 
@@ -76,5 +77,8 @@ public class UBItems {
 
         broken_ankh = new ItemBrokenAnkh(IdUtil.getNextItemID(), Material.iron);
         event.register("UncannyBaubles", "uncannybaubles:broken_ankh", "broken_ankh", broken_ankh);
+
+        digging_claws = new ItemDiggingClaws(IdUtil.getNextItemID(), Material.iron);
+        event.register("UncannyBaubles", "uncannybaubles:digging_claws", "digging_claws", digging_claws);
     }
 }

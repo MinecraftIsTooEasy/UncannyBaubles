@@ -32,6 +32,10 @@ public class UBEmiPlugin implements EmiPlugin {
         addFierceKittySlippersInfo(registry);
         addEternalSteakInfo(registry);
         addLuckyHorseshoeInfo(registry);
+        addCrossNecklaceInfo(registry);
+        addHermesBootsInfo(registry);
+        addBrokenAnkhInfo(registry);
+        addDiggingClawsInfo(registry);
     }
 
     private void addLuckyCloverInfo(EmiRegistry registry) {
@@ -292,6 +296,86 @@ public class UBEmiPlugin implements EmiPlugin {
             stacks,
             text,
             new ResourceLocation("uncannybaubles", "info/lucky_horseshoe")
+        ));
+    }
+
+    private void addCrossNecklaceInfo(EmiRegistry registry) {
+        List<EmiIngredient> stacks = Collections.singletonList(
+            EmiStack.of(new ItemStack(UBItems.cross_necklace))
+        );
+
+        List<Text> text = Arrays.asList(
+            Text.literal("§6" + Translator.get("item.cross_necklace.name")),
+            Text.literal(""),
+            Text.literal("§b" + Translator.get("emi.cross_necklace.desc")),
+            Text.literal(""),
+            Text.literal("§e" + Translator.get("emi.cross_necklace.obtain"))
+        );
+
+        registry.addRecipe(new EmiInfoRecipe(
+            stacks,
+            text,
+            new ResourceLocation("uncannybaubles", "info/cross_necklace")
+        ));
+    }
+
+    private void addHermesBootsInfo(EmiRegistry registry) {
+        List<EmiIngredient> stacks = Collections.singletonList(
+            EmiStack.of(new ItemStack(UBItems.hermes_boots))
+        );
+
+        List<Text> text = Arrays.asList(
+            Text.literal("§6" + Translator.get("item.hermes_boots.name")),
+            Text.literal(""),
+            Text.literal("§b" + Translator.get("emi.hermes_boots.desc")),
+            Text.literal(""),
+            Text.literal("§e" + Translator.get("emi.hermes_boots.obtain"))
+        );
+
+        registry.addRecipe(new EmiInfoRecipe(
+            stacks,
+            text,
+            new ResourceLocation("uncannybaubles", "info/hermes_boots")
+        ));
+    }
+
+    private void addBrokenAnkhInfo(EmiRegistry registry) {
+        List<EmiIngredient> stacks = Collections.singletonList(
+            EmiStack.of(new ItemStack(UBItems.broken_ankh))
+        );
+
+        List<Text> text = Arrays.asList(
+            Text.literal("§6" + Translator.get("item.broken_ankh.name")),
+            Text.literal(""),
+            Text.literal("§b" + Translator.get("emi.broken_ankh.desc")),
+            Text.literal(""),
+            Text.literal("§e" + Translator.get("emi.broken_ankh.obtain"))
+        );
+
+        registry.addRecipe(new EmiInfoRecipe(
+            stacks,
+            text,
+            new ResourceLocation("uncannybaubles", "info/broken_ankh")
+        ));
+    }
+
+    private void addDiggingClawsInfo(EmiRegistry registry) {
+        List<EmiIngredient> stacks = Collections.singletonList(
+            EmiStack.of(new ItemStack(UBItems.digging_claws))
+        );
+
+        List<Text> text = Arrays.asList(
+            Text.literal("§6" + Translator.get("item.digging_claws.name")),
+            Text.literal(""),
+            Text.literal("§b" + Translator.get("emi.digging_claws.desc")),
+            Text.literal(""),
+            Text.literal("§e" + Translator.get("emi.digging_claws.obtain"))
+        );
+
+        registry.addRecipe(new EmiInfoRecipe(
+            stacks,
+            text,
+            new ResourceLocation("uncannybaubles", "info/digging_claws")
         ));
     }
 }

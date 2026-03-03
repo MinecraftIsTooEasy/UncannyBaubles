@@ -1,4 +1,4 @@
-package com.inf1nlty.uncannybaubles.mixin.luckyclover;
+package com.inf1nlty.uncannybaubles.mixin.luckyhorseshoe;
 
 import com.inf1nlty.uncannybaubles.item.UBItems;
 import baubles.api.BaubleSlotHelper;

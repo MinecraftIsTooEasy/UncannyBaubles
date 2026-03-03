@@ -43,7 +43,7 @@
     "lavaimmunity.LavaImmunityRespawnMixin",
     "lavaimmunity.LavaWalkerEntityPlayerMixin",
     "luckyclover.LuckyCloverEnchantmentHelperMixin",
-    "luckyclover.LuckyHorseshoeFallDamageMixin",
+    "luckyhorseshoe.LuckyHorseshoeFallDamageMixin",
     "magnet.MagnetEntityItemMixin",
     "recipe.TileEntityFurnaceMixin",
     "regenbracelet.RegenBraceletFoodStatsMixin",

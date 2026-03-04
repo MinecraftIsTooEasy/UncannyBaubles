@@ -37,7 +37,7 @@ dependencies {
     implementation "com.github.MinecraftIsTooEasy:FastUtil:8.5.12"
     implementation "com.github.MinecraftIsTooEasy:EMI:1.1.24"
 
-    compileOnly "com.github.MinecraftIsTooEasy:MITE-ITF-Reborn:17.2.21"
+    implementation "com.github.MinecraftIsTooEasy:MITE-ITF-Reborn:17.2.22"
 }
 
 def fmlResolvedFile = configurations.fml.files.iterator().next()

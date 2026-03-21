@@ -7,6 +7,15 @@ item.uncannybaubles:lucky_clover.info=Adds an additional level 1 to the Fortune/
 item.bottled_cloud.name=Bottled Cloud
 item.uncannybaubles:bottled_cloud.info=Allow Double jump
 
+item.shiny_red_balloon.name=Shiny Red Balloon
+item.uncannybaubles:shiny_red_balloon.info=Grants jump height equivalent to Jump Boost II.
+
+item.cloud_in_a_balloon.name=Cloud in a Balloon
+item.uncannybaubles:cloud_in_a_balloon.info=Combines Bottled Cloud double jump and Jump Boost II.
+
+item.blue_horseshoe_balloon.name=Blue Horseshoe Balloon
+item.uncannybaubles:blue_horseshoe_balloon.info=Combines double jump, Jump Boost II, and complete fall damage immunity.
+
 item.pocket_piston.name=Pocket Piston
 item.uncannybaubles:pocket_piston.info=Touch distance +1
 
@@ -77,6 +86,15 @@ emi.lava_charm.obtain=Source: 1% drop from Fire Elementals\n/ Nether Fortress ch
 
 emi.bottled_cloud.desc=Grants double jump ability
 emi.bottled_cloud.obtain=Source: Dungeons, Mineshafts,\nDesert Temples
+
+emi.shiny_red_balloon.desc=Grants jump height equivalent to Jump Boost II.
+emi.shiny_red_balloon.obtain=Source: Fishing / default 5% drop from Ghasts.
+
+emi.cloud_in_a_balloon.desc=Combines the effects of Bottled Cloud and Shiny Red Balloon.
+emi.cloud_in_a_balloon.obtain=Source: Crafted from Bottled Cloud and Shiny Red Balloon.
+
+emi.blue_horseshoe_balloon.desc=Combines the effects of Cloud in a Balloon and Lucky Horseshoe.
+emi.blue_horseshoe_balloon.obtain=Source: Crafted from Cloud in a Balloon and Lucky Horseshoe.
 
 emi.pocket_piston.desc=Increases reach distance by 1
 emi.pocket_piston.obtain=Source: Village blacksmith chests
@@ -150,6 +168,12 @@ config.comment.uncannybaubles.lavaCharmFortressChestProbability=Chance to find i
 
 config.name.uncannybaubles.bottledCloudDungeonChestProbability=Bottled Cloud
 config.comment.uncannybaubles.bottledCloudDungeonChestProbability=Chance to find in underworld dungeon chests
+
+config.name.uncannybaubles.ghastShinyRedBalloonDropProbability=Shiny Red Balloon
+config.comment.uncannybaubles.ghastShinyRedBalloonDropProbability=Drop chance of Shiny Red Balloon from Ghasts
+
+config.name.uncannybaubles.shinyRedBalloonFishingProbability=Shiny Red Balloon
+config.comment.uncannybaubles.shinyRedBalloonFishingProbability=Chance to catch while fishing
 
 config.name.uncannybaubles.regenRingSwampHutChestProbability=Regen Bracelet
 config.comment.uncannybaubles.regenRingSwampHutChestProbability=Chance to find in swamp hut chests

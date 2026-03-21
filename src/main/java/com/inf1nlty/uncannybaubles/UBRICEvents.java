@@ -7,6 +7,7 @@ import com.inf1nlty.uncannybaubles.events.LavaCharmLootListener;
 import com.inf1nlty.uncannybaubles.events.PocketPistonCombatListener;
 import com.inf1nlty.uncannybaubles.events.PocketPistonLootListener;
 import com.inf1nlty.uncannybaubles.events.RegenBraceletLootListener;
+import com.inf1nlty.uncannybaubles.events.ShinyRedBalloonLootListener;
 import com.inf1nlty.uncannybaubles.events.WaterWalkerLootListener;
 import com.inf1nlty.uncannybaubles.item.UBItems;
 import moddedmite.rustedironcore.api.event.Handlers;
@@ -27,6 +28,7 @@ public class UBRICEvents extends Handlers {
         Handlers.LootTable.register(new BottledCloudLootListener());
         Handlers.LootTable.register(new RegenBraceletLootListener());
         Handlers.LootTable.register(new WaterWalkerLootListener());
+        Handlers.LootTable.register(new ShinyRedBalloonLootListener());
 
 //        Handlers.LootTable.register(new LootTableDebugListener());
 

@@ -27,11 +27,14 @@ public class UBEmiPlugin implements EmiPlugin {
         addLavaWalkerInfo(registry);
         addLavaCharmInfo(registry);
         addBottledCloudInfo(registry);
+        addShinyRedBalloonInfo(registry);
+        addCloudInABalloonInfo(registry);
         addPocketPistonInfo(registry);
         addKittySlippersInfo(registry);
         addFierceKittySlippersInfo(registry);
         addEternalSteakInfo(registry);
         addLuckyHorseshoeInfo(registry);
+        addBlueHorseshoeBalloonInfo(registry);
         addCrossNecklaceInfo(registry);
         addHermesBootsInfo(registry);
         addBrokenAnkhInfo(registry);
@@ -198,6 +201,46 @@ public class UBEmiPlugin implements EmiPlugin {
         ));
     }
 
+    private void addShinyRedBalloonInfo(EmiRegistry registry) {
+        List<EmiIngredient> stacks = Collections.singletonList(
+            EmiStack.of(new ItemStack(UBItems.shiny_red_balloon))
+        );
+
+        List<Text> text = Arrays.asList(
+            Text.literal("§6" + Translator.get("item.shiny_red_balloon.name")),
+            Text.literal(""),
+            Text.literal("§b" + Translator.get("emi.shiny_red_balloon.desc")),
+            Text.literal(""),
+            Text.literal("§e" + Translator.get("emi.shiny_red_balloon.obtain"))
+        );
+
+        registry.addRecipe(new EmiInfoRecipe(
+            stacks,
+            text,
+            new ResourceLocation("uncannybaubles", "info/shiny_red_balloon")
+        ));
+    }
+
+    private void addCloudInABalloonInfo(EmiRegistry registry) {
+        List<EmiIngredient> stacks = Collections.singletonList(
+            EmiStack.of(new ItemStack(UBItems.cloud_in_a_balloon))
+        );
+
+        List<Text> text = Arrays.asList(
+            Text.literal("§6" + Translator.get("item.cloud_in_a_balloon.name")),
+            Text.literal(""),
+            Text.literal("§b" + Translator.get("emi.cloud_in_a_balloon.desc")),
+            Text.literal(""),
+            Text.literal("§e" + Translator.get("emi.cloud_in_a_balloon.obtain"))
+        );
+
+        registry.addRecipe(new EmiInfoRecipe(
+            stacks,
+            text,
+            new ResourceLocation("uncannybaubles", "info/cloud_in_a_balloon")
+        ));
+    }
+
     private void addPocketPistonInfo(EmiRegistry registry) {
         List<EmiIngredient> stacks = Collections.singletonList(
             EmiStack.of(new ItemStack(UBItems.pocket_piston))
@@ -296,6 +339,26 @@ public class UBEmiPlugin implements EmiPlugin {
             stacks,
             text,
             new ResourceLocation("uncannybaubles", "info/lucky_horseshoe")
+        ));
+    }
+
+    private void addBlueHorseshoeBalloonInfo(EmiRegistry registry) {
+        List<EmiIngredient> stacks = Collections.singletonList(
+            EmiStack.of(new ItemStack(UBItems.blue_horseshoe_balloon))
+        );
+
+        List<Text> text = Arrays.asList(
+            Text.literal("§6" + Translator.get("item.blue_horseshoe_balloon.name")),
+            Text.literal(""),
+            Text.literal("§b" + Translator.get("emi.blue_horseshoe_balloon.desc")),
+            Text.literal(""),
+            Text.literal("§e" + Translator.get("emi.blue_horseshoe_balloon.obtain"))
+        );
+
+        registry.addRecipe(new EmiInfoRecipe(
+            stacks,
+            text,
+            new ResourceLocation("uncannybaubles", "info/blue_horseshoe_balloon")
         ));
     }
 

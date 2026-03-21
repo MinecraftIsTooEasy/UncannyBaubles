@@ -1,9 +1,7 @@
 package com.inf1nlty.uncannybaubles.mixin.luckyhorseshoe;
 
-import com.inf1nlty.uncannybaubles.item.UBItems;
-import baubles.api.BaubleSlotHelper;
+import com.inf1nlty.uncannybaubles.effect.jump.BalloonFallDamageEffect;
 import net.minecraft.EntityLivingBase;
-import net.minecraft.EntityPlayer;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -16,9 +14,8 @@ public abstract class LuckyHorseshoeFallDamageMixin {
     private void ub$preventFallDamage(float distance, CallbackInfo ci) {
         EntityLivingBase entity = (EntityLivingBase) (Object) this;
 
-        if (!(entity instanceof EntityPlayer player)) return;
-
-        if (BaubleSlotHelper.hasFeetOfType(player, UBItems.lucky_horseshoe))
+        if (BalloonFallDamageEffect.shouldCancelFallDamage(entity)) {
             ci.cancel();
+        }
     }
 }

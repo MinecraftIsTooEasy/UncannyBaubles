@@ -57,6 +57,11 @@ public class UBConfigs extends SimpleConfigs {
         "uncannybaubles.diggingClawsStoneDropProbability"
     );
 
+    public static final ConfigDouble ghastShinyRedBalloonDropProbability = new ConfigDouble(
+        "uncannybaubles.ghastShinyRedBalloonDropProbability", 0.05, 0.0, 1.0,
+        "uncannybaubles.ghastShinyRedBalloonDropProbability"
+    );
+
     public static final ConfigDouble kittySlippersTempleChestProbability = new ConfigDouble(
         "uncannybaubles.kittySlippersTempleChestProbability", 0.20, 0.0, 1.0,
         "uncannybaubles.kittySlippersTempleChestProbability"
@@ -90,6 +95,11 @@ public class UBConfigs extends SimpleConfigs {
     public static final ConfigDouble waterWalkerFishingProbability = new ConfigDouble(
         "uncannybaubles.waterWalkerFishingProbability", 0.15, 0.0, 1.0,
         "uncannybaubles.waterWalkerFishingProbability"
+    );
+
+    public static final ConfigDouble shinyRedBalloonFishingProbability = new ConfigDouble(
+        "uncannybaubles.shinyRedBalloonFishingProbability", 0.05, 0.0, 1.0,
+        "uncannybaubles.shinyRedBalloonFishingProbability"
     );
 
     // Other Settings
@@ -131,7 +141,8 @@ public class UBConfigs extends SimpleConfigs {
             horseLuckyHorseshoeDropProbability,
             ancientBoneLordNecklaceDropProbability,
             hermesBootsPhaseSpiderDropProbability,
-            diggingClawsStoneDropProbability
+            diggingClawsStoneDropProbability,
+            ghastShinyRedBalloonDropProbability
         );
 
         ChestLoot = List.of(
@@ -141,7 +152,8 @@ public class UBConfigs extends SimpleConfigs {
             lavaCharmFortressChestProbability,
             bottledCloudDungeonChestProbability,
             regenRingSwampHutChestProbability,
-            waterWalkerFishingProbability
+            waterWalkerFishingProbability,
+            shinyRedBalloonFishingProbability
         );
 
         OtherSettings = List.of(

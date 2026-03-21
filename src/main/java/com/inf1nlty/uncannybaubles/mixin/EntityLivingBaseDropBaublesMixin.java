@@ -41,6 +41,15 @@ public abstract class EntityLivingBaseDropBaublesMixin {
             }
         }
 
+        if (self instanceof EntityGhast) {
+            if (UBItems.shiny_red_balloon != null) {
+                double ghastProb = UBConfigs.ghastShinyRedBalloonDropProbability.getDoubleValue();
+                if (RandomUtil.rollChance(self.worldObj.rand, ghastProb)) {
+                    self.dropItem(UBItems.shiny_red_balloon);
+                }
+            }
+        }
+
         if (self instanceof EntityCow) {
             if (UBItems.eternal_steak != null) {
                 double cowProb = UBConfigs.cowEternalSteakDropProbability.getDoubleValue();

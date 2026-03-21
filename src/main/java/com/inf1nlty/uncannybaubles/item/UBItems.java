@@ -24,6 +24,9 @@ public class UBItems {
     public static ItemHermesBoots hermes_boots;
     public static ItemBrokenAnkh broken_ankh;
     public static ItemDiggingClaws digging_claws;
+    public static ItemShinyRedBalloon shiny_red_balloon;
+    public static ItemCloudInABalloon cloud_in_a_balloon;
+    public static ItemBlueHorseshoeBalloon blue_horseshoe_balloon;
 
     public static void registerItems(ItemRegistryEvent event) {
 
@@ -80,5 +83,14 @@ public class UBItems {
 
         digging_claws = new ItemDiggingClaws(IdUtil.getNextItemID(), Material.iron);
         event.register("UncannyBaubles", "uncannybaubles:digging_claws", "digging_claws", digging_claws);
+
+        shiny_red_balloon = new ItemShinyRedBalloon(IdUtil.getNextItemID(), Material.cloth);
+        event.register("UncannyBaubles", "uncannybaubles:shiny_red_balloon", "shiny_red_balloon", shiny_red_balloon);
+
+        cloud_in_a_balloon = new ItemCloudInABalloon(IdUtil.getNextItemID(), Material.mithril);
+        event.register("UncannyBaubles", "uncannybaubles:cloud_in_a_balloon", "cloud_in_a_balloon", cloud_in_a_balloon);
+
+        blue_horseshoe_balloon = new ItemBlueHorseshoeBalloon(IdUtil.getNextItemID(), Material.iron);
+        event.register("UncannyBaubles", "uncannybaubles:blue_horseshoe_balloon", "blue_horseshoe_balloon", blue_horseshoe_balloon);
     }
 }

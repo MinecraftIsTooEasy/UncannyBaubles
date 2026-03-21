@@ -1,17 +1,20 @@
 {
   "schemaVersion": 1,
   "id": "uncannybaubles",
-  "version": "1.0.0",
+  "version": "${version}",
   "depends": {
     "fishmodloader": ">=3.4.2",
     "rusted_iron_core": ">=1.5.0",
     "baubles": ">=1.1.2"
   },
+  "breaks": {
+    "mite-itf-reborn": "<17.2.22"
+  },
   "environment": "*",
   "name": "Uncanny Baubles",
   "description": "Add a series of uncanny baubles to MITE",
   "icon": "assets/uncannybaubles/icon.png",
-  "license": "MIT",
+  "license": "LGPL-3.0",
   "authors": [
     "Inf1nlty"
   ],

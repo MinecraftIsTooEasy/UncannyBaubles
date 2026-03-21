@@ -2,6 +2,8 @@ package com.inf1nlty.uncannybaubles.mixin.diggingclaws;
 
 import com.inf1nlty.uncannybaubles.UBConfigs;
 import com.inf1nlty.uncannybaubles.item.UBItems;
+import com.inf1nlty.uncannybaubles.util.DiggingClawsUtil;
+import com.inf1nlty.uncannybaubles.util.RandomUtil;
 import net.minecraft.*;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -15,13 +17,14 @@ public abstract class DiggingClawsDropMixin {
 
     @Shadow public World theWorld;
 
-    @Unique private Material ub$harvestedBlockMaterial = null;
+    @Unique private Block ub$harvestedBlock = null;
+    @Unique private int ub$harvestedBlockMetadata = 0;
 
     @Inject(method = "tryHarvestBlock", at = @At("HEAD"))
     private void ub$captureBlockMaterial(int x, int y, int z, CallbackInfoReturnable<Boolean> cir)
     {
-        Block block = theWorld.getBlock(x, y, z);
-        ub$harvestedBlockMaterial = (block != null) ? block.blockMaterial : null;
+        ub$harvestedBlock = theWorld.getBlock(x, y, z);
+        ub$harvestedBlockMetadata = theWorld.getBlockMetadata(x, y, z);
     }
 
     @Inject(method = "tryHarvestBlock", at = @At("RETURN"))
@@ -32,13 +35,13 @@ public abstract class DiggingClawsDropMixin {
 
             if (theWorld.isRemote) return;
 
-            if (ub$harvestedBlockMaterial != Material.stone) return;
+            if (!DiggingClawsUtil.isValidTarget(ub$harvestedBlock, ub$harvestedBlockMetadata)) return;
 
             double prob = UBConfigs.diggingClawsStoneDropProbability.getDoubleValue();
 
             if (prob <= 0.0) return;
 
-            if (theWorld.rand.nextDouble() < prob)
+            if (RandomUtil.rollChance(theWorld.rand, prob))
             {
                 EntityItem drop = new EntityItem(theWorld, x + 0.5, y + 0.5, z + 0.5, new ItemStack(UBItems.digging_claws, 1));
                 drop.delayBeforeCanPickup = 10;
@@ -47,7 +50,8 @@ public abstract class DiggingClawsDropMixin {
         }
         finally
         {
-            ub$harvestedBlockMaterial = null;
+            ub$harvestedBlock = null;
+            ub$harvestedBlockMetadata = 0;
         }
     }
 }

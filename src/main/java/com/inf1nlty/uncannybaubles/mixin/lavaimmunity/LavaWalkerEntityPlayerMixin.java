@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(EntityPlayer.class)
 public abstract class LavaWalkerEntityPlayerMixin {
 
-    @Inject(method = "onUpdate", at = @At("HEAD"))
+    @Inject(method = "onUpdate", at = @At("TAIL"))
     private void ub$lavaWalk(CallbackInfo ci) {
         EntityPlayer player = (EntityPlayer) (Object) this;
         if (player == null || player.worldObj == null) return;
@@ -21,7 +21,7 @@ public abstract class LavaWalkerEntityPlayerMixin {
 
         int x = player.getBlockPosX();
         int z = player.getBlockPosZ();
-        int startY = MathHelper.floor_double(player.posY);
+        int startY = MathHelper.floor_double(player.getFootPosY());
 
         int surfaceY = ub$findLavaSurface(player.worldObj, x, startY, z);
         Material surfaceMaterial = Material.lava;
@@ -40,20 +40,31 @@ public abstract class LavaWalkerEntityPlayerMixin {
         if (meta >= 8) meta = 0;
 
         double liquidHeight = 1.0D - (meta / 8.0D);
-        double targetY = surfaceY + liquidHeight + 0.08D;
-        double distanceToSurface = player.posY - targetY;
+        double targetFootY = surfaceY + liquidHeight + 0.01D;
+        double distanceToSurface = player.getFootPosY() - targetFootY;
 
         if (distanceToSurface > 1.5D) return;
         if (player.motionY > 0.42D) return;
 
-        if (distanceToSurface < -0.05D) {
-            player.posY = targetY;
+        double lockLowerBound = -0.35D;
+        double lockUpperBound = 0.15D;
+
+        if (distanceToSurface < lockLowerBound || distanceToSurface > lockUpperBound) {
+            return;
         }
 
-        player.motionY = 0.0D;
+        if (Math.abs(distanceToSurface) > 0.01D) {
+            player.setPosition(player.posX, ub$toPosY(player, targetFootY), player.posZ);
+        }
+
+        if (player.motionY < 0.0D) {
+            player.motionY = 0.0D;
+        }
+
         player.onGround = true;
         player.fallDistance = 0.0F;
         player.stepHeight = 0.6F;
+        ub$updateCameraBobbing(player);
     }
 
     @Unique
@@ -127,5 +138,21 @@ public abstract class LavaWalkerEntityPlayerMixin {
         }
 
         return -1;
+    }
+
+    @Unique
+    private double ub$toPosY(EntityPlayer player, double footY) {
+        return footY + (double)player.yOffset - (double)player.ySize;
+    }
+
+    @Unique
+    private void ub$updateCameraBobbing(EntityPlayer player) {
+        float horizontalSpeed = MathHelper.sqrt_double(player.motionX * player.motionX + player.motionZ * player.motionZ);
+
+        if (horizontalSpeed > 0.1F) {
+            horizontalSpeed = 0.1F;
+        }
+
+        player.cameraYaw += (horizontalSpeed - player.cameraYaw) * 0.4F;
     }
 }

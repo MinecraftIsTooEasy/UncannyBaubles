@@ -22,6 +22,11 @@ public abstract class ItemBaseBaubles extends Item implements IBauble {
     }
 
     @Override
+    public boolean isHarmedByAcid() {
+        return false;
+    }
+
+    @Override
     public abstract BaubleType getBaubleType(ItemStack itemstack);
 
     @Override

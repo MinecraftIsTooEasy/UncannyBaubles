@@ -1,9 +1,6 @@
 package com.inf1nlty.uncannybaubles.mixin.diggingclaws;
 
-import com.inf1nlty.uncannybaubles.UBConfigs;
-import com.inf1nlty.uncannybaubles.item.UBItems;
-import com.inf1nlty.uncannybaubles.util.DiggingClawsUtil;
-import com.inf1nlty.uncannybaubles.util.RandomUtil;
+import com.inf1nlty.uncannybaubles.feature.diggingclaws.DiggingClawsUtil;
 import net.minecraft.*;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -16,6 +13,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public abstract class DiggingClawsDropMixin {
 
     @Shadow public World theWorld;
+    @Shadow public ServerPlayer thisPlayerMP;
 
     @Unique private Block ub$harvestedBlock = null;
     @Unique private int ub$harvestedBlockMetadata = 0;
@@ -31,22 +29,7 @@ public abstract class DiggingClawsDropMixin {
     private void ub$dropDiggingClawsFromStone(int x, int y, int z, CallbackInfoReturnable<Boolean> cir)
     {
         try {
-            if (!cir.getReturnValue()) return;
-
-            if (theWorld.isRemote) return;
-
-            if (!DiggingClawsUtil.isValidTarget(ub$harvestedBlock, ub$harvestedBlockMetadata)) return;
-
-            double prob = UBConfigs.diggingClawsStoneDropProbability.getDoubleValue();
-
-            if (prob <= 0.0) return;
-
-            if (RandomUtil.rollChance(theWorld.rand, prob))
-            {
-                EntityItem drop = new EntityItem(theWorld, x + 0.5, y + 0.5, z + 0.5, new ItemStack(UBItems.digging_claws, 1));
-                drop.delayBeforeCanPickup = 10;
-                theWorld.spawnEntityInWorld(drop);
-            }
+            DiggingClawsUtil.tryDropFromHarvestedBlock(thisPlayerMP, theWorld, x, y, z, cir.getReturnValue(), ub$harvestedBlock, ub$harvestedBlockMetadata);
         }
         finally
         {

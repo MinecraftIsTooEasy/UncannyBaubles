@@ -1,38 +1,43 @@
-# 奇异饰品
+# Uncanny Baubles
 
 ---
 
-# 奇异饰品-v1.0.3
+# Uncanny Baubles-v1.0.4
 
-- 优化了云中瓶的效果，给予一定的摔落高度减免
-- 优化了水上漂的效果，修复了一些问题
-- 继续添加了一些新饰品
-- 兼容最新版ITFRB，如果要和ITFRB一起装请安装ITFRB17.2.22及以后的版本.
+- Optimized a large amount of code structure, with several bauble feature implementations organized and reused
+- Players wearing Digging Claws will no longer receive extra Digging Claws drops when mining stone-material blocks
 
-# 奇异饰品-v1.0.2
+# Uncanny Baubles-v1.0.3
 
----
+- Optimized the Bottled Cloud effect and added partial fall-height reduction
+- Optimized the Water Walker effect and fixed several issues
+- Added more new baubles
+- Added compatibility with the latest ITFRB. When using this mod with ITFRB, please install ITFRB 17.2.22 or later.
 
-- 继续添加了新的饰品，有挖掘抓、十字项链、安卡护符、赫尔墨斯靴等，现在需要饰品栏v1.1.2
-- 修复了一些饰品的BUG
-- 调整了云朵瓶的爆率，云朵瓶的效果还有待优化
-- 调整了幸运草的效果
+# Uncanny Baubles-v1.0.2
 
 ---
 
-# 奇异饰品-v1.0.1
+- Added more new baubles, including Digging Claws, Cross Necklace, Ankh Charm, Hermes Boots, and more. Baubles v1.1.2 is now required.
+- Fixed several bauble-related bugs
+- Adjusted the Bottled Cloud drop rate. The Bottled Cloud effect still needs further optimization.
+- Adjusted the Lucky Clover effect
 
 ---
 
-- 更新使用新的饰品栏检测API
-- 添加了遗漏的磁铁配方
+# Uncanny Baubles-v1.0.1
 
 ---
 
-# 奇异饰品-v1.0.0
+- Updated to use the new bauble slot detection API
+- Added the missing Magnet recipe
 
 ---
 
-- 添加了一系列的饰品
+# Uncanny Baubles-v1.0.0
+
+---
+
+- Added a series of baubles
 
 ---

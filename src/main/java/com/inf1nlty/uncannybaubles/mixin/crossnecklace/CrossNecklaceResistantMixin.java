@@ -1,7 +1,6 @@
 package com.inf1nlty.uncannybaubles.mixin.crossnecklace;
 
-import baubles.api.BaubleSlotHelper;
-import com.inf1nlty.uncannybaubles.item.UBItems;
+import com.inf1nlty.uncannybaubles.feature.crossnecklace.CrossNecklaceEffect;
 import net.minecraft.*;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -21,21 +20,6 @@ public abstract class CrossNecklaceResistantMixin extends Entity {
 
     @Inject(method = "onUpdate", at = @At("HEAD"))
     private void ub$onUpdate(CallbackInfo ci) {
-
-        Object self = this;
-
-        if (!(self instanceof EntityPlayer player)) return;
-
-        if (player.worldObj == null || player.worldObj.isRemote) return;
-
-        boolean wearing = UBItems.cross_necklace != null && BaubleSlotHelper.hasAmuletOfType(player, UBItems.cross_necklace);
-        if (wearing)
-        {
-            this.maxHurtResistantTime = 40;
-        }
-        else
-        {
-            this.maxHurtResistantTime = 20;
-        }
+        this.maxHurtResistantTime = CrossNecklaceEffect.getHurtResistantTime(this, this.maxHurtResistantTime);
     }
 }

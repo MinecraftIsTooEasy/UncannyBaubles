@@ -28,7 +28,8 @@ public class ItemMagnet extends ItemBaseBaubles {
         for (Object nearbyEntity : nearbyEntities) {
             if (nearbyEntity instanceof EntityItem entityItem) {
                 if (entityItem.isDead) continue;
-                ((IAttractableItem) entityItem).ub$setAttractedByMagnet();
+                IAttractableItem attractableItem = IAttractableItem.of(entityItem);
+                attractableItem.ub$setAttractedByMagnet();
                 entityItem.onCollideWithPlayer(player);
             }
         }

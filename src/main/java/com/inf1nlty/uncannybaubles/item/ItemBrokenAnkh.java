@@ -24,15 +24,12 @@ public class ItemBrokenAnkh extends ItemBaseBaubles {
         super.addInformation(item_stack, player, info, extended_info, slot);
 
         if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT) || Keyboard.isKeyDown(Keyboard.KEY_RSHIFT)) {
-
-            if (player instanceof IBrokenAnkhCooldown) {
-                int cooldownTicks = ((IBrokenAnkhCooldown) player).ub$getBrokenAnkhCooldown();
-                if (cooldownTicks > 0) {
-                    int totalSeconds = (cooldownTicks + 19) / 20;
-                    int minutes = totalSeconds / 60;
-                    int seconds = totalSeconds % 60;
-                    info.add(String.format(I18n.getString("item.uncannybaubles:broken_ankh.cooldown"), minutes, seconds));
-                }
+            int cooldownTicks = IBrokenAnkhCooldown.get(player);
+            if (cooldownTicks > 0) {
+                int totalSeconds = (cooldownTicks + 19) / 20;
+                int minutes = totalSeconds / 60;
+                int seconds = totalSeconds % 60;
+                info.add(String.format(I18n.getString("item.uncannybaubles:broken_ankh.cooldown"), minutes, seconds));
             }
         }
     }

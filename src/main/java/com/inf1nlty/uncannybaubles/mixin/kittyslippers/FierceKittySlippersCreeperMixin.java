@@ -1,6 +1,6 @@
 package com.inf1nlty.uncannybaubles.mixin.kittyslippers;
 
-import com.inf1nlty.uncannybaubles.ai.EntityAIAvoidPlayerWithFierceKittySlippers;
+import com.inf1nlty.uncannybaubles.feature.kittyslippers.ai.EntityAIAvoidPlayerWithFierceKittySlippers;
 import net.minecraft.*;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

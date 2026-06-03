@@ -1,7 +1,6 @@
 package com.inf1nlty.uncannybaubles.mixin.kittyslippers;
 
-import com.inf1nlty.uncannybaubles.item.UBItems;
-import baubles.api.BaubleSlotHelper;
+import com.inf1nlty.uncannybaubles.feature.kittyslippers.KittySlippersEffect;
 import net.minecraft.*;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -17,36 +16,13 @@ public abstract class KittySlippersCreeperSwellMixin {
 
     @Inject(method = "shouldExecute", at = @At("HEAD"), cancellable = true)
     private void ub$preventSwellForKittySlippersPlayer(CallbackInfoReturnable<Boolean> cir) {
-        if (this.swellingCreeper == null) {
-            return;
-        }
-
-        EntityLivingBase target = this.swellingCreeper.getAttackTarget();
-
-        if (target instanceof EntityPlayer player) {
-
-            if (BaubleSlotHelper.hasFeetOfType(player, UBItems.kitty_slippers)) {
-                cir.setReturnValue(false);
-            }
+        if (KittySlippersEffect.shouldPreventCreeperSwell(this.swellingCreeper)) {
+            cir.setReturnValue(false);
         }
     }
 
     @Inject(method = "updateTask", at = @At("HEAD"))
     private void ub$resetSwellForKittySlippersPlayer(CallbackInfo ci) {
-
-        if (this.swellingCreeper == null) {
-            return;
-        }
-
-        EntityLivingBase target = this.swellingCreeper.getAttackTarget();
-
-        if (target instanceof EntityPlayer player) {
-
-            if (BaubleSlotHelper.hasFeetOfType(player, UBItems.kitty_slippers)) {
-                if (this.swellingCreeper.getCreeperState() > 0) {
-                    this.swellingCreeper.setCreeperState(-1);
-                }
-            }
-        }
+        KittySlippersEffect.resetCreeperSwell(this.swellingCreeper);
     }
 }

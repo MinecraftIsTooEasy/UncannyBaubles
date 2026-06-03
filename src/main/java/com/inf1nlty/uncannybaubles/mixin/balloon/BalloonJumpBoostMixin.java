@@ -1,6 +1,6 @@
 package com.inf1nlty.uncannybaubles.mixin.balloon;
 
-import com.inf1nlty.uncannybaubles.effect.jump.BalloonJumpBoostEffect;
+import com.inf1nlty.uncannybaubles.feature.jump.BalloonJumpBoostEffect;
 import net.minecraft.EntityLivingBase;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

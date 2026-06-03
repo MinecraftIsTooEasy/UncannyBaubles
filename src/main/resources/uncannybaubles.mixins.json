@@ -5,15 +5,10 @@
   "target": "DEFAULT",
   "minVersion": "0.8.3",
   "client": [
-    "brokenankh.BrokenAnkhParticleSyncMixin",
-    "brokenankh.BrokenAnkhSyncMixin",
     "client.EffectRendererMixin",
     "diggingclaws.DiggingClawsSoundMixin",
-    "eternalbeef.EternalBeefSyncMixin",
     "kittyslippers.FierceKittySlippersHudMixin",
-    "kittyslippers.FierceKittySlippersSyncMixin",
-    "lavaimmunity.LavaImmunityHudMixin",
-    "lavaimmunity.LavaImmunitySyncMixin"
+    "lavaimmunity.LavaImmunityHudMixin"
   ],
   "injectors": {
     "defaultRequire": 1
@@ -24,14 +19,12 @@
     "bezoar.BezoarPoisonImmunityMixin",
     "bottledcloud.BottledCloudEntityLivingBaseMixin",
     "brokenankh.BrokenAnkhCooldownMixin",
-    "brokenankh.BrokenAnkhRespawnMixin",
     "brokenankh.BrokenAnkhTotemMixin",
     "crossnecklace.CrossNecklaceResistantMixin",
     "diggingclaws.DiggingClawsDropMixin",
     "diggingclaws.DiggingClawsSpeedMixin",
     "EntityLivingBaseDropBaublesMixin",
     "eternalbeef.EternalBeefCooldownMixin",
-    "eternalbeef.EternalBeefRespawnMixin",
     "hermesboots.HermesBootsPlayerCapabilitiesMixin",
     "kittyslippers.FierceKittySlippersCooldownMixin",
     "kittyslippers.FierceKittySlippersCreeperMixin",
@@ -41,8 +34,8 @@
     "kittyslippers.KittySlippersPlayerMixin",
     "kittyslippers.KittySlippersTargetMixin",
     "lavaimmunity.LavaImmunityMixin",
-    "lavaimmunity.LavaImmunityRespawnMixin",
     "lavaimmunity.LavaWalkerEntityPlayerMixin",
+    "PlayerStateRespawnMixin",
     "luckyclover.EntityLivingBaseExtraDropsMixin",
     "luckyclover.LuckyCloverEnchantmentHelperMixin",
     "luckyhorseshoe.LuckyHorseshoeFallDamageMixin",

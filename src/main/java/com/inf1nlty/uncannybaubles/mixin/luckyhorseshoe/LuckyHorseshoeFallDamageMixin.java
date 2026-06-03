@@ -1,6 +1,6 @@
 package com.inf1nlty.uncannybaubles.mixin.luckyhorseshoe;
 
-import com.inf1nlty.uncannybaubles.effect.jump.BalloonFallDamageEffect;
+import com.inf1nlty.uncannybaubles.feature.jump.BalloonFallDamageEffect;
 import net.minecraft.EntityLivingBase;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

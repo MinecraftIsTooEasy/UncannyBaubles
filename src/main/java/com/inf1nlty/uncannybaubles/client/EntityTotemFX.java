@@ -3,6 +3,7 @@ package com.inf1nlty.uncannybaubles.client;
 import net.minecraft.*;
 
 public class EntityTotemFX extends EntityFX {
+
     private final double targetX, targetY, targetZ;
     private final double motionDirX, motionDirY, motionDirZ;
     private final double travelDist;

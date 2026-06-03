@@ -1,10 +1,7 @@
 package com.inf1nlty.uncannybaubles.mixin.bezoar;
 
-import com.inf1nlty.uncannybaubles.item.UBItems;
-import baubles.api.BaubleSlotHelper;
+import com.inf1nlty.uncannybaubles.feature.bezoar.BezoarEffect;
 import net.minecraft.EntityLivingBase;
-import net.minecraft.EntityPlayer;
-import net.minecraft.Potion;
 import net.minecraft.PotionEffect;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -16,34 +13,13 @@ public abstract class BezoarPoisonImmunityMixin {
 
     @Inject(method = "addPotionEffect", at = @At("HEAD"), cancellable = true)
     private void onAddPotionEffect(PotionEffect effect, CallbackInfo ci) {
-        if (effect == null) return;
-
-        EntityLivingBase self = (EntityLivingBase) (Object) this;
-        if (!(self instanceof EntityPlayer player)) return;
-
-        if (player.worldObj == null || player.worldObj.isRemote) return;
-
-        if (UBItems.bezoar == null) return;
-        if (!BaubleSlotHelper.hasCharmOfType(player, UBItems.bezoar)) return;
-
-        if (effect.getPotion() == Potion.poison) {
+        if (BezoarEffect.shouldCancelPotion((EntityLivingBase) (Object) this, effect)) {
             ci.cancel();
         }
     }
 
     @Inject(method = "onUpdate", at = @At("HEAD"))
     private void onEntityUpdate(CallbackInfo ci) {
-        EntityLivingBase self = (EntityLivingBase) (Object) this;
-        if (!(self instanceof EntityPlayer player)) return;
-
-        if (player.worldObj == null || player.worldObj.isRemote) return;
-
-        if (UBItems.bezoar == null) return;
-        if (!BaubleSlotHelper.hasCharmOfType(player, UBItems.bezoar)) return;
-
-        if (player.isPotionActive(Potion.poison)) {
-            int poisonId = Potion.poison.getId();
-            player.removePotionEffect(poisonId);
-        }
+        BezoarEffect.removePoisonIfNeeded((EntityLivingBase) (Object) this);
     }
 }

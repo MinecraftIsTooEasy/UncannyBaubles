@@ -31,10 +31,8 @@ public class ItemEternalSteak extends ItemMeat {
     @Override
     public void onEaten(ItemStack item_stack, World world, EntityPlayer player) {
         super.onEaten(item_stack, world, player);
-        if (player instanceof ICooldown) {
-            int cooldownTicks = UBConfigs.eternalSteakCooldownTicks.getIntegerValue();
-            ((ICooldown) player).ub$setEternalBeefCooldown(cooldownTicks);
-        }
+        int cooldownTicks = UBConfigs.eternalSteakCooldownTicks.getIntegerValue();
+        ICooldown.set(player, cooldownTicks);
     }
 
     @Override
@@ -51,11 +49,8 @@ public class ItemEternalSteak extends ItemMeat {
 
     @Override
     public boolean onItemRightClick(EntityPlayer player, float partial_tick, boolean ctrl_is_down) {
-        if (player instanceof ICooldown) {
-            int cooldown = ((ICooldown) player).ub$getEternalBeefCooldown();
-            if (cooldown > 0) {
-                return false;
-            }
+        if (ICooldown.get(player) > 0) {
+            return false;
         }
         return super.onItemRightClick(player, partial_tick, ctrl_is_down);
     }
@@ -68,12 +63,10 @@ public class ItemEternalSteak extends ItemMeat {
         if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT) || Keyboard.isKeyDown(Keyboard.KEY_RSHIFT)) {
             info.add(I18n.getString("item.uncannybaubles:eternal_steak.info"));
 
-            if (player instanceof ICooldown) {
-                int cooldownTicks = ((ICooldown) player).ub$getEternalBeefCooldown();
-                if (cooldownTicks > 0) {
-                    int seconds = (cooldownTicks + 19) / 20;
-                    info.add(String.format(I18n.getString("item.uncannybaubles:eternal_steak.cooldown"), seconds));
-                }
+            int cooldownTicks = ICooldown.get(player);
+            if (cooldownTicks > 0) {
+                int seconds = (cooldownTicks + 19) / 20;
+                info.add(String.format(I18n.getString("item.uncannybaubles:eternal_steak.cooldown"), seconds));
             }
         }
     }

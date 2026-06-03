@@ -57,9 +57,7 @@ public abstract class ItemBaseBaubles extends Item implements IBauble {
     }
 
     @Override
-    public void onUnequipped(ItemStack itemStack, EntityLivingBase entityLivingBase) {
-
-    }
+    public void onUnequipped(ItemStack itemStack, EntityLivingBase entityLivingBase) {}
 
     @Override
     @SuppressWarnings("unchecked")

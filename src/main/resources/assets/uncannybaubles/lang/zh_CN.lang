@@ -59,7 +59,10 @@ item.uncannybaubles:broken_ankh.info=佩戴时受到致命伤害免于死亡，�
 item.uncannybaubles:broken_ankh.cooldown=§b冷却时间： %d:%02d
 
 item.digging_claws.name=挖掘爪
-item.uncannybaubles:digging_claws.info=佩戴时可空手挖掘石头/圆石材质方块。挖掘石头类方块时有概率掉落挖掘爪。
+item.uncannybaubles:digging_claws.info=佩戴时可空手挖掘石头/圆石材质方块。可由蠹虫掉落。
+
+item.onion_ring.name=洋葱指环
+item.uncannybaubles:onion_ring.info=食用食物后，按实际恢复的饥饿值获得急迫II，每点持续6秒。
 
 uncannybaubles.fierce_kitty_slippers.cooldown=§c耄耋拖鞋冷却: %d:%02d
 
@@ -120,8 +123,11 @@ emi.hermes_boots.obtain=获取来源: 相位蜘蛛默认3%概率掉落
 emi.broken_ankh.desc=佩戴时受到致命伤害免于死亡，\n获得伤害吸收4、再生3、抗性提升3共11秒。\n冷却时间30分钟。
 emi.broken_ankh.obtain=获取来源: 合成（钻石块+下界之星+艾德曼）
 
-emi.digging_claws.desc=佩戴时可空手挖掘石头材质方块。\n挖掘石头类方块时有概率掉落挖掘爪。
-emi.digging_claws.obtain=获取来源: 挖掘石头材质方块默认1%概率掉落
+emi.digging_claws.desc=佩戴时可空手挖掘石头材质方块。
+emi.digging_claws.obtain=获取来源: 蠹虫默认2%概率掉落
+
+emi.onion_ring.desc=食用食物后，按实际恢复的饥饿值\n获得急迫II，每点持续6秒。
+emi.onion_ring.obtain=获取来源: 废弃矿井、沙漠神殿
 
 config.tab.drops=生物掉落概率
 config.tab.chests=箱子战利品概率
@@ -151,8 +157,8 @@ config.comment.uncannybaubles.ancientBoneLordNecklaceDropProbability=远古骷�
 config.name.uncannybaubles.hermesBootsPhaseSpiderDropProbability=赫尔墨斯靴
 config.comment.uncannybaubles.hermesBootsPhaseSpiderDropProbability=相位蜘蛛掉落赫尔墨斯靴的概率
 
-config.name.uncannybaubles.diggingClawsStoneDropProbability=挖掘爪
-config.comment.uncannybaubles.diggingClawsStoneDropProbability=挖掘石头类方块额外掉落挖掘爪的概率
+config.name.uncannybaubles.diggingClawsSilverfishDropProbability=挖掘爪
+config.comment.uncannybaubles.diggingClawsSilverfishDropProbability=蠹虫死亡时掉落挖掘爪的概率
 
 config.name.uncannybaubles.kittySlippersTempleChestProbability=猫咪拖鞋
 config.comment.uncannybaubles.kittySlippersTempleChestProbability=沙漠/丛林神庙箱子中找到猫咪拖鞋的概率
@@ -180,6 +186,9 @@ config.comment.uncannybaubles.regenRingSwampHutChestProbability=女巫小屋箱�
 
 config.name.uncannybaubles.waterWalkerFishingProbability=水上漂靴
 config.comment.uncannybaubles.waterWalkerFishingProbability=钓鱼获得水上漂靴的概率
+
+config.name.uncannybaubles.onionRingChestProbability=洋葱指环
+config.comment.uncannybaubles.onionRingChestProbability=废弃矿井/沙漠神殿箱子中找到洋葱指环的概率
 
 config.name.uncannybaubles.eternalSteakCooldownTicks=永恒牛排
 config.comment.uncannybaubles.eternalSteakCooldownTicks=永恒牛排冷却时间(tick, 20tick=1秒)

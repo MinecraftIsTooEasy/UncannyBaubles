@@ -12,6 +12,7 @@ import net.minecraft.EntityHorse;
 import net.minecraft.EntityLivingBase;
 import net.minecraft.EntityPhaseSpider;
 import net.minecraft.EntityPlayer;
+import net.minecraft.EntitySilverfish;
 import net.minecraft.EntityWitch;
 import net.minecraft.Item;
 import net.minecraft.World;
@@ -35,6 +36,7 @@ public final class BaubleDropRules {
         tryDrop(entity, entity instanceof EntityHorse, UBItems.lucky_horseshoe, UBConfigs.horseLuckyHorseshoeDropProbability.getDoubleValue());
         tryDrop(entity, entity instanceof EntityPhaseSpider, UBItems.hermes_boots, UBConfigs.hermesBootsPhaseSpiderDropProbability.getDoubleValue());
         tryDrop(entity, entity instanceof EntityAncientBoneLord, UBItems.cross_necklace, UBConfigs.ancientBoneLordNecklaceDropProbability.getDoubleValue());
+        tryDrop(entity, entity instanceof EntitySilverfish, UBItems.digging_claws, UBConfigs.diggingClawsSilverfishDropProbability.getDoubleValue());
     }
 
     private static void dropLuckyClover(EntityLivingBase entity) {

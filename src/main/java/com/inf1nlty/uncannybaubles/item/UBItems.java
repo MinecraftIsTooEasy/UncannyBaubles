@@ -27,6 +27,7 @@ public class UBItems {
     public static ItemBaseBaubles hermes_boots;
     public static ItemBrokenAnkh broken_ankh;
     public static ItemBaseBaubles digging_claws;
+    public static ItemBaseBaubles onion_ring;
     public static ItemBaseBaubles shiny_red_balloon;
     public static ItemBaseBaubles cloud_in_a_balloon;
     public static ItemBaseBaubles blue_horseshoe_balloon;
@@ -61,6 +62,7 @@ public class UBItems {
         register(event, "broken_ankh", broken_ankh);
 
         digging_claws = registerBauble(event, "digging_claws", Material.iron, BaubleType.HAND);
+        onion_ring = registerBauble(event, "onion_ring", Material.iron, BaubleType.HAND);
         shiny_red_balloon = registerBauble(event, "shiny_red_balloon", Material.cloth, BaubleType.BELT);
         cloud_in_a_balloon = registerBauble(event, "cloud_in_a_balloon", Material.mithril, BaubleType.BELT);
         blue_horseshoe_balloon = registerBauble(event, "blue_horseshoe_balloon", Material.iron, BaubleType.BELT);

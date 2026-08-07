@@ -1,19 +1,14 @@
 package com.inf1nlty.uncannybaubles.feature.diggingclaws;
 
 import baubles.api.BaubleSlotHelper;
-import com.inf1nlty.uncannybaubles.UBConfigs;
 import com.inf1nlty.uncannybaubles.item.UBItems;
-import com.inf1nlty.uncannybaubles.util.RandomUtil;
 import net.minecraft.Block;
 import net.minecraft.BlockOre;
 import net.minecraft.EnchantmentHelper;
-import net.minecraft.EntityItem;
 import net.minecraft.EntityPlayer;
 import net.minecraft.EnumLevelBonus;
-import net.minecraft.ItemStack;
 import net.minecraft.Material;
 import net.minecraft.Potion;
-import net.minecraft.World;
 
 public final class DiggingClawsUtil {
 
@@ -68,19 +63,6 @@ public final class DiggingClawsUtil {
         }
 
         return speed * (1.0F + player.getLevelModifier(EnumLevelBonus.HARVESTING));
-    }
-
-    public static void tryDropFromHarvestedBlock(EntityPlayer player, World world, int x, int y, int z, boolean harvested, Block block, int metadata) {
-        if (!harvested || world.isRemote) return;
-        if (hasEquipped(player)) return;
-        if (!isValidTarget(block, metadata)) return;
-
-        double probability = UBConfigs.diggingClawsStoneDropProbability.getDoubleValue();
-        if (probability <= 0.0D || !RandomUtil.rollChance(world.rand, probability)) return;
-
-        EntityItem drop = new EntityItem(world, x + 0.5D, y + 0.5D, z + 0.5D, new ItemStack(UBItems.digging_claws, 1));
-        drop.delayBeforeCanPickup = 10;
-        world.spawnEntityInWorld(drop);
     }
 
     public static boolean hasEquipped(EntityPlayer player) {

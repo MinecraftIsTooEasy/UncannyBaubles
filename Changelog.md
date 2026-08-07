@@ -5,7 +5,8 @@
 # Uncanny Baubles-v1.0.4
 
 - Optimized a large amount of code structure, with several bauble feature implementations organized and reused
-- Players wearing Digging Claws will no longer receive extra Digging Claws drops when mining stone-material blocks
+- Added the Onion Ring: eating while it is equipped grants Haste II for 6 seconds per nutrition point actually restored; it can be found in mineshaft and desert temple chests
+- Changed how Digging Claws are obtained: they no longer drop from mining stone-material blocks and now have a default 2% chance to drop from silverfish
 
 # Uncanny Baubles-v1.0.3
 

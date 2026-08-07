@@ -21,7 +21,6 @@
     "brokenankh.BrokenAnkhCooldownMixin",
     "brokenankh.BrokenAnkhTotemMixin",
     "crossnecklace.CrossNecklaceResistantMixin",
-    "diggingclaws.DiggingClawsDropMixin",
     "diggingclaws.DiggingClawsSpeedMixin",
     "EntityLivingBaseDropBaublesMixin",
     "eternalbeef.EternalBeefCooldownMixin",
@@ -40,6 +39,7 @@
     "luckyclover.LuckyCloverEnchantmentHelperMixin",
     "luckyhorseshoe.LuckyHorseshoeFallDamageMixin",
     "magnet.MagnetEntityItemMixin",
+    "onionring.OnionRingFoodStatsMixin",
     "recipe.TileEntityFurnaceMixin",
     "regenbracelet.RegenBraceletFoodStatsMixin",
     "waterwalker.WaterWalkerEntityPlayerMixin"

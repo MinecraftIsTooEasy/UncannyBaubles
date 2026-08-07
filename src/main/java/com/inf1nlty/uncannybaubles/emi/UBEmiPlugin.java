@@ -41,6 +41,7 @@ public class UBEmiPlugin implements EmiPlugin {
         addInfo(registry, "hermes_boots", UBItems.hermes_boots);
         addInfo(registry, "broken_ankh", UBItems.broken_ankh);
         addInfo(registry, "digging_claws", UBItems.digging_claws);
+        addInfo(registry, "onion_ring", UBItems.onion_ring);
     }
 
     private void addInfo(EmiRegistry registry, String key, Item... items) {

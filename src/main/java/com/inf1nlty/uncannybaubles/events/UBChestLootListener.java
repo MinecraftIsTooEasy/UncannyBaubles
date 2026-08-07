@@ -11,6 +11,7 @@ public class UBChestLootListener implements ILootTableRegisterListener {
 
     @Override
     public void onMineshaftRegister(List<WeightedRandomChestContent> original) {
+        ChestLootEntries.add(original, UBItems.onion_ring, UBConfigs.onionRingChestProbability.getDoubleValue(), 1, 1, 2);
         addBottledCloud(original, 2);
     }
 
@@ -23,6 +24,7 @@ public class UBChestLootListener implements ILootTableRegisterListener {
     @Override
     public void onDesertPyramidRegister(List<WeightedRandomChestContent> original) {
         ChestLootEntries.add(original, UBItems.kitty_slippers, UBConfigs.kittySlippersTempleChestProbability.getDoubleValue(), 1, 1, 2);
+        ChestLootEntries.add(original, UBItems.onion_ring, UBConfigs.onionRingChestProbability.getDoubleValue(), 1, 1, 1);
         addBottledCloud(original, 2);
     }
 

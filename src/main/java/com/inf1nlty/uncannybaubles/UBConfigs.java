@@ -52,9 +52,9 @@ public class UBConfigs extends SimpleConfigs {
         "uncannybaubles.hermesBootsPhaseSpiderDropProbability"
     );
 
-    public static final ConfigDouble diggingClawsStoneDropProbability = new ConfigDouble(
-        "uncannybaubles.diggingClawsStoneDropProbability", 0.01, 0.0, 1.0,
-        "uncannybaubles.diggingClawsStoneDropProbability"
+    public static final ConfigDouble diggingClawsSilverfishDropProbability = new ConfigDouble(
+        "uncannybaubles.diggingClawsSilverfishDropProbability", 0.02, 0.0, 1.0,
+        "uncannybaubles.diggingClawsSilverfishDropProbability"
     );
 
     public static final ConfigDouble ghastShinyRedBalloonDropProbability = new ConfigDouble(
@@ -102,6 +102,11 @@ public class UBConfigs extends SimpleConfigs {
         "uncannybaubles.shinyRedBalloonFishingProbability"
     );
 
+    public static final ConfigDouble onionRingChestProbability = new ConfigDouble(
+        "uncannybaubles.onionRingChestProbability", 0.20, 0.0, 1.0,
+        "uncannybaubles.onionRingChestProbability"
+    );
+
     // Other Settings
     public static final ConfigInteger eternalSteakCooldownTicks = new ConfigInteger(
         "uncannybaubles.eternalSteakCooldownTicks", 600, 0, 43200,
@@ -141,7 +146,7 @@ public class UBConfigs extends SimpleConfigs {
             horseLuckyHorseshoeDropProbability,
             ancientBoneLordNecklaceDropProbability,
             hermesBootsPhaseSpiderDropProbability,
-            diggingClawsStoneDropProbability,
+            diggingClawsSilverfishDropProbability,
             ghastShinyRedBalloonDropProbability
         );
 
@@ -153,7 +158,8 @@ public class UBConfigs extends SimpleConfigs {
             bottledCloudDungeonChestProbability,
             regenRingSwampHutChestProbability,
             waterWalkerFishingProbability,
-            shinyRedBalloonFishingProbability
+            shinyRedBalloonFishingProbability,
+            onionRingChestProbability
         );
 
         OtherSettings = List.of(

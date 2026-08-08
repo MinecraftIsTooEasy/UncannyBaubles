@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "uncannybaubles",
+  "id": "${id}",
   "version": "${version}",
   "depends": {
     "fishmodloader": ">=3.4.2",
@@ -11,7 +11,7 @@
     "mite-itf-reborn": "<17.2.22"
   },
   "environment": "*",
-  "name": "Uncanny Baubles",
+  "name": "${name}",
   "description": "Add a series of uncanny baubles to MITE",
   "icon": "assets/uncannybaubles/icon.png",
   "license": "LGPL-3.0",

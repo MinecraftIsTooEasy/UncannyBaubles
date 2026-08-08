@@ -43,5 +43,8 @@
     "recipe.TileEntityFurnaceMixin",
     "regenbracelet.RegenBraceletFoodStatsMixin",
     "waterwalker.WaterWalkerEntityPlayerMixin"
-  ]
+  ],
+  "overwrites": {
+    "requireAnnotations": true
+  }
 }
